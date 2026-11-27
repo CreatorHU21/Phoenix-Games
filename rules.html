@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Phoenix Games | Szabályzat</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <style>
+        .rules-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .rule-card {
+            padding: 30px;
+        }
+
+        .rule-card h3 {
+            color: var(--green);
+            margin-bottom: 20px;
+        }
+
+        .rule-card ul {
+            padding-left: 20px;
+        }
+
+        .rule-card li {
+            margin-bottom: 12px;
+            color: var(--silver);
+        }
+
+        .punishment {
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            background: #17181c;
+        }
+
+        .warning {
+            border-left: 4px solid #ffcc00;
+        }
+
+        .warning h3 {
+            color: #ffcc00;
+        }
+
+        .mute {
+            border-left: 4px solid #ff8800;
+        }
+
+        .mute h3 {
+            color: #ff8800;
+        }
+
+        .ban {
+            border-left: 4px solid #ff2020;
+        }
+
+        .ban h3 {
+            color: #ff2020;
+        }
+
+        .important-notice {
+            padding: 20px;
+            margin-top: 25px;
+            border: 1px solid #ff2020;
+            border-radius: 10px;
+            background: #ff202010;
+        }
+
+        @media (max-width: 768px) {
+            .rules-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .rule-card {
+                padding: 20px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo.png" alt="Phoenix Games" class="logo-img">
+            </a>
+            <span>PHOENIX GAMES</span>
+        </div>
+
+        <nav id="menu">
+            <a href="index.html">Főoldal</a>
+            <a href="games.html">Játékaink</a>
+            <a href="economy.html">Gazdaság</a>
+            <a href="shop.html">Shop</a>
+            <a href="rules.html">Szabályzat</a>
+            <a href="community.html">Közösség</a>
+        </nav>
+
+        <button id="menu-button"
+                type="button"
+                aria-label="Menü megnyitása"
+                aria-controls="menu">
+            ☰
+        </button>
+
+    </header>
+
+    <main>
+
+        <!-- SZABÁLYZAT FŐOLDAL -->
+
+        <section class="hero">
+
+            <p class="subtitle">RESPECT. FAIR PLAY. COMMUNITY.</p>
+
+            <h1>SZABÁLYZAT</h1>
+
+            <p>
+                Ismerd meg a Phoenix Games közösségi
+                szabályzatát, és segíts fenntartani
+                a kulturált, barátságos környezetet!
+            </p>
+
+            <a class="button" href="#rules-list">
+                Szabályzat megtekintése
+            </a>
+
+            <a class="button" href="#punishments">
+                Szabályszegések és büntetések
+            </a>
+
+        </section>
+
+        <!-- SZABÁLYPONTOK -->
+
+        <section id="rules-list">
+
+            <h2>📜 Közösségi szabályzat</h2>
+
+            <div class="rules-grid">
+
+                <!-- 1. SZABÁLY -->
+
+                <article class="card rule-card">
+
+                    <h3>🤝 1. TISZTELET ÉS VISELKEDÉS</h3>
+
+                    <ul>
+                        <li>Mindenkivel viselkedj kulturáltan és tisztelettudóan.</li>
+
+                        <li>Tilos a sértegetés, zaklatás, fenyegetés és provokáció.</li>
+
+                        <li>Tilos a rasszista, diszkriminatív és gyűlöletkeltő megnyilvánulás.</li>
+
+                        <li>Tartsd tiszteletben mások véleményét, kerüld a személyeskedést.</li>
+                    </ul>
+
+                </article>
+
+                <!-- 2. SZABÁLY -->
+
+                <article class="card rule-card">
+
+                    <h3>💬 2. CHAT ÉS KOMMUNIKÁCIÓ</h3>
+
+                    <ul>
+                        <li>Tilos a spam, flood és a felesleges üzenetküldés.</li>
+
+                        <li>Kerüld a túlzott káromkodást és a nagybetűs írást.</li>
+
+                        <li>A csatornákat rendeltetésük szerint használd.</li>
+
+                        <li>Tilos a konfliktuskeltés és mások adatainak megosztása.</li>
+                    </ul>
+
+                </article>
+
+                <!-- 3. SZABÁLY -->
+
+                <article class="card rule-card">
+
+                    <h3>🔊 3. HANGCSATORNÁK</h3>
+
+                    <ul>
+                        <li>Tilos a kiabálás, mikrofonspam és fülsértő hangok lejátszása.</li>
+
+                        <li>Hangtorzítót és soundboardot csak mértékkel használj.</li>
+
+                        <li>Ne zavard mások beszélgetését.</li>
+
+                        <li>Tartsd tiszteletben a többi résztvevőt.</li>
+                    </ul>
+
+                </article>
+
+                <!-- 4. SZABÁLY -->
+
+                <article class="card rule-card">
+
+                    <h3>📺 4. STREAM ÉS TARTALOMGYÁRTÁS</h3>
+
+                    <ul>
+                        <li>Tiszteld a streamert és a közösség tagjait.</li>
+
+                        <li>Tilos a streamek szándékos megzavarása és a trollkodás.</li>
+
+                        <li>Tilos a streamsniping és a spoilerezés engedély nélkül.</li>
+
+                        <li>A streamer személyes adatainak megosztása tilos.</li>
+                    </ul>
+
+                </article>
+
+                <!-- 5. SZABÁLY -->
+
+                <article class="card rule-card">
+
+                    <h3>📢 5. HIRDETÉSEK ÉS REKLÁMOK</h3>
+
+                    <ul>
+                        <li>Más szerverek és streamek engedély nélküli reklámozása tilos.</li>
+
+                        <li>Tilos a kéretlen privát reklámküldés.</li>
+
+                        <li>Saját tartalmat csak kijelölt csatornában vagy engedéllyel oszthatsz meg.</li>
+                    </ul>
+
+                </article>
+
+                <!-- 6. SZABÁLY -->
+
+                <article class="card rule-card">
+
+                    <h3>🔞 6. TILTOTT TARTALMAK</h3>
+
+                    <ul>
+                        <li>Tilos a pornográf, erőszakos és felkavaró tartalom.</li>
+
+                        <li>Tilos az illegális tevékenységek népszerűsítése.</li>
+
+                        <li>Tilos a veszélyes linkek terjesztése.</li>
+
+                        <li>A Discord közösségi irányelveinek betartása kötelező.</li>
+                    </ul>
+
+                </article>
+
+                <!-- 7. SZABÁLY -->
+
+                <article class="card rule-card">
+
+                    <h3>🛡️ 7. MODERÁCIÓ ÉS VEZETŐSÉG</h3>
+
+                    <ul>
+                        <li>A moderátorok feladata a szerver rendjének fenntartása.</li>
+
+                        <li>Szabályszegés esetén jogosultak intézkedni.</li>
+
+                        <li>Panaszodat kulturáltan, privát üzenetben jelezd.</li>
+
+                        <li>Tilos a moderátorok megszemélyesítése.</li>
+                    </ul>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- 8. SZABÁLY -->
+
+        <section id="punishments">
+
+            <h2>⚖️ 8. SZABÁLYSZEGÉSEK ÉS BÜNTETÉSEK</h2>
+
+            <div class="punishment warning">
+
+                <h3>🟡 Figyelmeztetés</h3>
+
+                <p>Enyhébb szabályszegés esetén.</p>
+
+            </div>
+
+            <div class="punishment mute">
+
+                <h3>🟠 Némítás</h3>
+
+                <p>Ismétlődő vagy zavaró viselkedés esetén.</p>
+
+            </div>
+
+            <div class="punishment ban">
+
+                <h3>🔴 Kitiltás</h3>
+
+                <p>Súlyos vagy rendszeres szabályszegés esetén.</p>
+
+            </div>
+
+            <div class="important-notice">
+
+                <p>
+                    <strong>⚠️ FONTOS!</strong>
+                </p>
+
+                <p>
+                    Súlyos esetben azonnali kitiltás
+                    is alkalmazható.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- DISCORD IRÁNYELVEK -->
+
+        <section id="discord-guidelines">
+
+            <h2>📘 Discord közösségi irányelvek</h2>
+
+            <p>
+                A Phoenix Games szabályzata mellett
+                a Discord közösségi irányelveinek
+                betartása is kötelező.
+            </p>
+
+            <a class="button"
+               href="https://discord.com/guidelines"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                Discord irányelvek megtekintése
+
+            </a>
+
+        </section>
+
+        <!-- KÖZÖSSÉG -->
+
+        <section id="join">
+
+            <h2>🔥 Csatlakozz a Phoenix Games közösségéhez!</h2>
+
+            <p>
+                Tartsd be a szabályokat,
+                tiszteld a közösség tagjait,
+                és érezd jól magad!
+            </p>
+
+            <a class="button" href="community.html">
+                Tovább a közösséghez
+            </a>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>© 2026 Phoenix Games</p>
+
+        <p>PLAY. EARN. RISE.</p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
