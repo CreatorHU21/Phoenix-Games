@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="hu">
 <head>
@@ -89,6 +90,8 @@
 
 <body>
 
+    <!-- NAVIGÁCIÓ -->
+
     <header>
 
         <div class="logo">
@@ -99,13 +102,37 @@
         </div>
 
         <nav id="menu">
-            <a href="index.html">Főoldal</a>
-            <a href="games.html">Játékaink</a>
-            <a href="economy.html">Gazdaság</a>
-            <a href="shop.html">Shop</a>
-            <a href="rules.html">Szabályzat</a>
-            <a href="community.html">Közösség</a>
+
+            <a href="index.html" data-lang="home">Főoldal</a>
+            <a href="games.html" data-lang="games">Játékaink</a>
+            <a href="economy.html" data-lang="economy">Gazdaság</a>
+            <a href="shop.html" data-lang="shop">Shop</a>
+            <a href="rules.html" data-lang="rules" aria-current="page">Szabályzat</a>
+            <a href="community.html" data-lang="community">Közösség</a>
+
         </nav>
+
+        <!-- NYELVVÁLTÓ -->
+
+        <div class="language-switcher">
+
+            <button type="button"
+                    class="language-button active"
+                    data-language="hu"
+                    aria-label="Magyar"
+                    aria-pressed="true">
+                🇭🇺 HU
+            </button>
+
+            <button type="button"
+                    class="language-button"
+                    data-language="en"
+                    aria-label="English"
+                    aria-pressed="false">
+                🇬🇧 EN
+            </button>
+
+        </div>
 
         <button id="menu-button"
                 type="button"
@@ -124,19 +151,23 @@
 
             <p class="subtitle">RESPECT. FAIR PLAY. COMMUNITY.</p>
 
-            <h1>SZABÁLYZAT</h1>
+            <h1 data-lang="rules_title">SZABÁLYZAT</h1>
 
-            <p>
+            <p data-lang="rules_hero">
                 Ismerd meg a Phoenix Games közösségi
                 szabályzatát, és segíts fenntartani
                 a kulturált, barátságos környezetet!
             </p>
 
-            <a class="button" href="#rules-list">
+            <a class="button"
+               href="#rules-list"
+               data-lang="view_rules">
                 Szabályzat megtekintése
             </a>
 
-            <a class="button" href="#punishments">
+            <a class="button"
+               href="#punishments"
+               data-lang="view_punishments">
                 Szabályszegések és büntetések
             </a>
 
@@ -146,7 +177,9 @@
 
         <section id="rules-list">
 
-            <h2>📜 Közösségi szabályzat</h2>
+            <h2 data-lang="community_rules_title">
+                📜 Közösségi szabályzat
+            </h2>
 
             <div class="rules-grid">
 
@@ -154,16 +187,28 @@
 
                 <article class="card rule-card">
 
-                    <h3>🤝 1. TISZTELET ÉS VISELKEDÉS</h3>
+                    <h3 data-lang="rule_1_title">
+                        🤝 1. TISZTELET ÉS VISELKEDÉS
+                    </h3>
 
                     <ul>
-                        <li>Mindenkivel viselkedj kulturáltan és tisztelettudóan.</li>
 
-                        <li>Tilos a sértegetés, zaklatás, fenyegetés és provokáció.</li>
+                        <li data-lang="rule_1_1">
+                            Mindenkivel viselkedj kulturáltan és tisztelettudóan.
+                        </li>
 
-                        <li>Tilos a rasszista, diszkriminatív és gyűlöletkeltő megnyilvánulás.</li>
+                        <li data-lang="rule_1_2">
+                            Tilos a sértegetés, zaklatás, fenyegetés és provokáció.
+                        </li>
 
-                        <li>Tartsd tiszteletben mások véleményét, kerüld a személyeskedést.</li>
+                        <li data-lang="rule_1_3">
+                            Tilos a rasszista, diszkriminatív és gyűlöletkeltő megnyilvánulás.
+                        </li>
+
+                        <li data-lang="rule_1_4">
+                            Tartsd tiszteletben mások véleményét, kerüld a személyeskedést.
+                        </li>
+
                     </ul>
 
                 </article>
@@ -172,16 +217,28 @@
 
                 <article class="card rule-card">
 
-                    <h3>💬 2. CHAT ÉS KOMMUNIKÁCIÓ</h3>
+                    <h3 data-lang="rule_2_title">
+                        💬 2. CHAT ÉS KOMMUNIKÁCIÓ
+                    </h3>
 
                     <ul>
-                        <li>Tilos a spam, flood és a felesleges üzenetküldés.</li>
 
-                        <li>Kerüld a túlzott káromkodást és a nagybetűs írást.</li>
+                        <li data-lang="rule_2_1">
+                            Tilos a spam, flood és a felesleges üzenetküldés.
+                        </li>
 
-                        <li>A csatornákat rendeltetésük szerint használd.</li>
+                        <li data-lang="rule_2_2">
+                            Kerüld a túlzott káromkodást és a nagybetűs írást.
+                        </li>
 
-                        <li>Tilos a konfliktuskeltés és mások adatainak megosztása.</li>
+                        <li data-lang="rule_2_3">
+                            A csatornákat rendeltetésük szerint használd.
+                        </li>
+
+                        <li data-lang="rule_2_4">
+                            Tilos a konfliktuskeltés és mások adatainak megosztása.
+                        </li>
+
                     </ul>
 
                 </article>
@@ -190,16 +247,28 @@
 
                 <article class="card rule-card">
 
-                    <h3>🔊 3. HANGCSATORNÁK</h3>
+                    <h3 data-lang="rule_3_title">
+                        🔊 3. HANGCSATORNÁK
+                    </h3>
 
                     <ul>
-                        <li>Tilos a kiabálás, mikrofonspam és fülsértő hangok lejátszása.</li>
 
-                        <li>Hangtorzítót és soundboardot csak mértékkel használj.</li>
+                        <li data-lang="rule_3_1">
+                            Tilos a kiabálás, mikrofonspam és fülsértő hangok lejátszása.
+                        </li>
 
-                        <li>Ne zavard mások beszélgetését.</li>
+                        <li data-lang="rule_3_2">
+                            Hangtorzítót és soundboardot csak mértékkel használj.
+                        </li>
 
-                        <li>Tartsd tiszteletben a többi résztvevőt.</li>
+                        <li data-lang="rule_3_3">
+                            Ne zavard mások beszélgetését.
+                        </li>
+
+                        <li data-lang="rule_3_4">
+                            Tartsd tiszteletben a többi résztvevőt.
+                        </li>
+
                     </ul>
 
                 </article>
@@ -208,16 +277,28 @@
 
                 <article class="card rule-card">
 
-                    <h3>📺 4. STREAM ÉS TARTALOMGYÁRTÁS</h3>
+                    <h3 data-lang="rule_4_title">
+                        📺 4. STREAM ÉS TARTALOMGYÁRTÁS
+                    </h3>
 
                     <ul>
-                        <li>Tiszteld a streamert és a közösség tagjait.</li>
 
-                        <li>Tilos a streamek szándékos megzavarása és a trollkodás.</li>
+                        <li data-lang="rule_4_1">
+                            Tiszteld a streamert és a közösség tagjait.
+                        </li>
 
-                        <li>Tilos a streamsniping és a spoilerezés engedély nélkül.</li>
+                        <li data-lang="rule_4_2">
+                            Tilos a streamek szándékos megzavarása és a trollkodás.
+                        </li>
 
-                        <li>A streamer személyes adatainak megosztása tilos.</li>
+                        <li data-lang="rule_4_3">
+                            Tilos a streamsniping és a spoilerezés engedély nélkül.
+                        </li>
+
+                        <li data-lang="rule_4_4">
+                            A streamer személyes adatainak megosztása tilos.
+                        </li>
+
                     </ul>
 
                 </article>
@@ -226,14 +307,24 @@
 
                 <article class="card rule-card">
 
-                    <h3>📢 5. HIRDETÉSEK ÉS REKLÁMOK</h3>
+                    <h3 data-lang="rule_5_title">
+                        📢 5. HIRDETÉSEK ÉS REKLÁMOK
+                    </h3>
 
                     <ul>
-                        <li>Más szerverek és streamek engedély nélküli reklámozása tilos.</li>
 
-                        <li>Tilos a kéretlen privát reklámküldés.</li>
+                        <li data-lang="rule_5_1">
+                            Más szerverek és streamek engedély nélküli reklámozása tilos.
+                        </li>
 
-                        <li>Saját tartalmat csak kijelölt csatornában vagy engedéllyel oszthatsz meg.</li>
+                        <li data-lang="rule_5_2">
+                            Tilos a kéretlen privát reklámküldés.
+                        </li>
+
+                        <li data-lang="rule_5_3">
+                            Saját tartalmat csak kijelölt csatornában vagy engedéllyel oszthatsz meg.
+                        </li>
+
                     </ul>
 
                 </article>
@@ -242,16 +333,28 @@
 
                 <article class="card rule-card">
 
-                    <h3>🔞 6. TILTOTT TARTALMAK</h3>
+                    <h3 data-lang="rule_6_title">
+                        🔞 6. TILTOTT TARTALMAK
+                    </h3>
 
                     <ul>
-                        <li>Tilos a pornográf, erőszakos és felkavaró tartalom.</li>
 
-                        <li>Tilos az illegális tevékenységek népszerűsítése.</li>
+                        <li data-lang="rule_6_1">
+                            Tilos a pornográf, erőszakos és felkavaró tartalom.
+                        </li>
 
-                        <li>Tilos a veszélyes linkek terjesztése.</li>
+                        <li data-lang="rule_6_2">
+                            Tilos az illegális tevékenységek népszerűsítése.
+                        </li>
 
-                        <li>A Discord közösségi irányelveinek betartása kötelező.</li>
+                        <li data-lang="rule_6_3">
+                            Tilos a veszélyes linkek terjesztése.
+                        </li>
+
+                        <li data-lang="rule_6_4">
+                            A Discord közösségi irányelveinek betartása kötelező.
+                        </li>
+
                     </ul>
 
                 </article>
@@ -260,16 +363,28 @@
 
                 <article class="card rule-card">
 
-                    <h3>🛡️ 7. MODERÁCIÓ ÉS VEZETŐSÉG</h3>
+                    <h3 data-lang="rule_7_title">
+                        🛡️ 7. MODERÁCIÓ ÉS VEZETŐSÉG
+                    </h3>
 
                     <ul>
-                        <li>A moderátorok feladata a szerver rendjének fenntartása.</li>
 
-                        <li>Szabályszegés esetén jogosultak intézkedni.</li>
+                        <li data-lang="rule_7_1">
+                            A moderátorok feladata a szerver rendjének fenntartása.
+                        </li>
 
-                        <li>Panaszodat kulturáltan, privát üzenetben jelezd.</li>
+                        <li data-lang="rule_7_2">
+                            Szabályszegés esetén jogosultak intézkedni.
+                        </li>
 
-                        <li>Tilos a moderátorok megszemélyesítése.</li>
+                        <li data-lang="rule_7_3">
+                            Panaszodat kulturáltan, privát üzenetben jelezd.
+                        </li>
+
+                        <li data-lang="rule_7_4">
+                            Tilos a moderátorok megszemélyesítése.
+                        </li>
+
                     </ul>
 
                 </article>
@@ -282,39 +397,55 @@
 
         <section id="punishments">
 
-            <h2>⚖️ 8. SZABÁLYSZEGÉSEK ÉS BÜNTETÉSEK</h2>
+            <h2 data-lang="rule_8_title">
+                ⚖️ 8. SZABÁLYSZEGÉSEK ÉS BÜNTETÉSEK
+            </h2>
 
             <div class="punishment warning">
 
-                <h3>🟡 Figyelmeztetés</h3>
+                <h3 data-lang="warning_title">
+                    🟡 Figyelmeztetés
+                </h3>
 
-                <p>Enyhébb szabályszegés esetén.</p>
+                <p data-lang="warning_description">
+                    Enyhébb szabályszegés esetén.
+                </p>
 
             </div>
 
             <div class="punishment mute">
 
-                <h3>🟠 Némítás</h3>
+                <h3 data-lang="mute_title">
+                    🟠 Némítás
+                </h3>
 
-                <p>Ismétlődő vagy zavaró viselkedés esetén.</p>
+                <p data-lang="mute_description">
+                    Ismétlődő vagy zavaró viselkedés esetén.
+                </p>
 
             </div>
 
             <div class="punishment ban">
 
-                <h3>🔴 Kitiltás</h3>
+                <h3 data-lang="ban_title">
+                    🔴 Kitiltás
+                </h3>
 
-                <p>Súlyos vagy rendszeres szabályszegés esetén.</p>
+                <p data-lang="ban_description">
+                    Súlyos vagy rendszeres szabályszegés esetén.
+                </p>
 
             </div>
 
             <div class="important-notice">
 
                 <p>
-                    <strong>⚠️ FONTOS!</strong>
+                    <strong data-lang="important_title">
+                        ⚠️ FONTOS!
+                    </strong>
                 </p>
 
-                <p>
+                <p data-lang="important_description">
                     Súlyos esetben azonnali kitiltás
                     is alkalmazható.
                 </p>
@@ -327,9 +458,11 @@
 
         <section id="discord-guidelines">
 
-            <h2>📘 Discord közösségi irányelvek</h2>
+            <h2 data-lang="guidelines_title">
+                📘 Discord közösségi irányelvek
+            </h2>
 
-            <p>
+            <p data-lang="guidelines_description">
                 A Phoenix Games szabályzata mellett
                 a Discord közösségi irányelveinek
                 betartása is kötelező.
@@ -338,7 +471,8 @@
             <a class="button"
                href="https://discord.com/guidelines"
                target="_blank"
-               rel="noopener noreferrer">
+               rel="noopener noreferrer"
+               data-lang="view_guidelines">
 
                 Discord irányelvek megtekintése
 
@@ -350,21 +484,27 @@
 
         <section id="join">
 
-            <h2>🔥 Csatlakozz a Phoenix Games közösségéhez!</h2>
+            <h2 data-lang="join_rules_title">
+                🔥 Csatlakozz a Phoenix Games közösségéhez!
+            </h2>
 
-            <p>
+            <p data-lang="join_rules_description">
                 Tartsd be a szabályokat,
                 tiszteld a közösség tagjait,
                 és érezd jól magad!
             </p>
 
-            <a class="button" href="community.html">
+            <a class="button"
+               href="community.html"
+               data-lang="go_to_community">
                 Tovább a közösséghez
             </a>
 
         </section>
 
     </main>
+
+    <!-- LÁBLÉC -->
 
     <footer>
 
@@ -375,6 +515,359 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="language.js"></script>
+
+    <!-- MAGYAR FORDÍTÁSOK -->
+
+    <script>
+
+        Object.assign(translations.hu, {
+
+            rules_title: "SZABÁLYZAT",
+
+            rules_hero:
+                "Ismerd meg a Phoenix Games közösségi szabályzatát, és segíts fenntartani a kulturált, barátságos környezetet!",
+
+            view_punishments:
+                "Szabályszegések és büntetések",
+
+            community_rules_title:
+                "📜 Közösségi szabályzat",
+
+            rule_1_title:
+                "🤝 1. TISZTELET ÉS VISELKEDÉS",
+
+            rule_1_1:
+                "Mindenkivel viselkedj kulturáltan és tisztelettudóan.",
+
+            rule_1_2:
+                "Tilos a sértegetés, zaklatás, fenyegetés és provokáció.",
+
+            rule_1_3:
+                "Tilos a rasszista, diszkriminatív és gyűlöletkeltő megnyilvánulás.",
+
+            rule_1_4:
+                "Tartsd tiszteletben mások véleményét, kerüld a személyeskedést.",
+
+            rule_2_title:
+                "💬 2. CHAT ÉS KOMMUNIKÁCIÓ",
+
+            rule_2_1:
+                "Tilos a spam, flood és a felesleges üzenetküldés.",
+
+            rule_2_2:
+                "Kerüld a túlzott káromkodást és a nagybetűs írást.",
+
+            rule_2_3:
+                "A csatornákat rendeltetésük szerint használd.",
+
+            rule_2_4:
+                "Tilos a konfliktuskeltés és mások adatainak megosztása.",
+
+            rule_3_title:
+                "🔊 3. HANGCSATORNÁK",
+
+            rule_3_1:
+                "Tilos a kiabálás, mikrofonspam és fülsértő hangok lejátszása.",
+
+            rule_3_2:
+                "Hangtorzítót és soundboardot csak mértékkel használj.",
+
+            rule_3_3:
+                "Ne zavard mások beszélgetését.",
+
+            rule_3_4:
+                "Tartsd tiszteletben a többi résztvevőt.",
+
+            rule_4_title:
+                "📺 4. STREAM ÉS TARTALOMGYÁRTÁS",
+
+            rule_4_1:
+                "Tiszteld a streamert és a közösség tagjait.",
+
+            rule_4_2:
+                "Tilos a streamek szándékos megzavarása és a trollkodás.",
+
+            rule_4_3:
+                "Tilos a streamsniping és a spoilerezés engedély nélkül.",
+
+            rule_4_4:
+                "A streamer személyes adatainak megosztása tilos.",
+
+            rule_5_title:
+                "📢 5. HIRDETÉSEK ÉS REKLÁMOK",
+
+            rule_5_1:
+                "Más szerverek és streamek engedély nélküli reklámozása tilos.",
+
+            rule_5_2:
+                "Tilos a kéretlen privát reklámküldés.",
+
+            rule_5_3:
+                "Saját tartalmat csak kijelölt csatornában vagy engedéllyel oszthatsz meg.",
+
+            rule_6_title:
+                "🔞 6. TILTOTT TARTALMAK",
+
+            rule_6_1:
+                "Tilos a pornográf, erőszakos és felkavaró tartalom.",
+
+            rule_6_2:
+                "Tilos az illegális tevékenységek népszerűsítése.",
+
+            rule_6_3:
+                "Tilos a veszélyes linkek terjesztése.",
+
+            rule_6_4:
+                "A Discord közösségi irányelveinek betartása kötelező.",
+
+            rule_7_title:
+                "🛡️ 7. MODERÁCIÓ ÉS VEZETŐSÉG",
+
+            rule_7_1:
+                "A moderátorok feladata a szerver rendjének fenntartása.",
+
+            rule_7_2:
+                "Szabályszegés esetén jogosultak intézkedni.",
+
+            rule_7_3:
+                "Panaszodat kulturáltan, privát üzenetben jelezd.",
+
+            rule_7_4:
+                "Tilos a moderátorok megszemélyesítése.",
+
+            rule_8_title:
+                "⚖️ 8. SZABÁLYSZEGÉSEK ÉS BÜNTETÉSEK",
+
+            warning_title:
+                "🟡 Figyelmeztetés",
+
+            warning_description:
+                "Enyhébb szabályszegés esetén.",
+
+            mute_title:
+                "🟠 Némítás",
+
+            mute_description:
+                "Ismétlődő vagy zavaró viselkedés esetén.",
+
+            ban_title:
+                "🔴 Kitiltás",
+
+            ban_description:
+                "Súlyos vagy rendszeres szabályszegés esetén.",
+
+            important_title:
+                "⚠️ FONTOS!",
+
+            important_description:
+                "Súlyos esetben azonnali kitiltás is alkalmazható.",
+
+            guidelines_title:
+                "📘 Discord közösségi irányelvek",
+
+            guidelines_description:
+                "A Phoenix Games szabályzata mellett a Discord közösségi irányelveinek betartása is kötelező.",
+
+            view_guidelines:
+                "Discord irányelvek megtekintése",
+
+            join_rules_title:
+                "🔥 Csatlakozz a Phoenix Games közösségéhez!",
+
+            join_rules_description:
+                "Tartsd be a szabályokat, tiszteld a közösség tagjait, és érezd jól magad!",
+
+            go_to_community:
+                "Tovább a közösséghez"
+
+        });
+
+        <!-- ANGOL FORDÍTÁSOK -->
+
+        Object.assign(translations.en, {
+
+            rules_title: "RULES",
+
+            rules_hero:
+                "Learn the Phoenix Games community rules and help maintain a respectful and friendly environment!",
+
+            view_punishments:
+                "Rule Violations and Penalties",
+
+            community_rules_title:
+                "📜 Community Rules",
+
+            rule_1_title:
+                "🤝 1. RESPECT AND CONDUCT",
+
+            rule_1_1:
+                "Treat everyone politely and respectfully.",
+
+            rule_1_2:
+                "Insults, harassment, threats, and provocation are prohibited.",
+
+            rule_1_3:
+                "Racist, discriminatory, and hateful expressions are prohibited.",
+
+            rule_1_4:
+                "Respect other people's opinions and avoid personal attacks.",
+
+            rule_2_title:
+                "💬 2. CHAT AND COMMUNICATION",
+
+            rule_2_1:
+                "Spamming, flooding, and unnecessary messages are prohibited.",
+
+            rule_2_2:
+                "Avoid excessive swearing and writing in all caps.",
+
+            rule_2_3:
+                "Use channels for their intended purposes.",
+
+            rule_2_4:
+                "Starting conflicts and sharing other people's personal information are prohibited.",
+
+            rule_3_title:
+                "🔊 3. VOICE CHANNELS",
+
+            rule_3_1:
+                "Shouting, microphone spam, and playing excessively loud or unpleasant sounds are prohibited.",
+
+            rule_3_2:
+                "Use voice changers and soundboards in moderation.",
+
+            rule_3_3:
+                "Do not interrupt other people's conversations.",
+
+            rule_3_4:
+                "Respect all other participants.",
+
+            rule_4_title:
+                "📺 4. STREAMING AND CONTENT CREATION",
+
+            rule_4_1:
+                "Respect the streamer and community members.",
+
+            rule_4_2:
+                "Intentionally disrupting streams and trolling are prohibited.",
+
+            rule_4_3:
+                "Stream sniping and sharing spoilers without permission are prohibited.",
+
+            rule_4_4:
+                "Sharing the streamer's personal information is prohibited.",
+
+            rule_5_title:
+                "📢 5. ADVERTISING AND PROMOTION",
+
+            rule_5_1:
+                "Advertising other servers and streams without permission is prohibited.",
+
+            rule_5_2:
+                "Sending unsolicited advertisements through private messages is prohibited.",
+
+            rule_5_3:
+                "You may only share your own content in designated channels or with permission.",
+
+            rule_6_title:
+                "🔞 6. PROHIBITED CONTENT",
+
+            rule_6_1:
+                "Pornographic, violent, and disturbing content is prohibited.",
+
+            rule_6_2:
+                "Promoting illegal activities is prohibited.",
+
+            rule_6_3:
+                "Sharing dangerous links is prohibited.",
+
+            rule_6_4:
+                "Compliance with Discord's Community Guidelines is mandatory.",
+
+            rule_7_title:
+                "🛡️ 7. MODERATION AND MANAGEMENT",
+
+            rule_7_1:
+                "Moderators are responsible for maintaining order on the server.",
+
+            rule_7_2:
+                "Moderators are authorized to take action when rules are violated.",
+
+            rule_7_3:
+                "Report your complaints respectfully through private messages.",
+
+            rule_7_4:
+                "Impersonating moderators is prohibited.",
+
+            rule_8_title:
+                "⚖️ 8. RULE VIOLATIONS AND PENALTIES",
+
+            warning_title:
+                "🟡 Warning",
+
+            warning_description:
+                "For minor rule violations.",
+
+            mute_title:
+                "🟠 Mute",
+
+            mute_description:
+                "For repeated or disruptive behavior.",
+
+            ban_title:
+                "🔴 Ban",
+
+            ban_description:
+                "For serious or repeated rule violations.",
+
+            important_title:
+                "⚠️ IMPORTANT!",
+
+            important_description:
+                "An immediate ban may be issued in serious cases.",
+
+            guidelines_title:
+                "📘 Discord Community Guidelines",
+
+            guidelines_description:
+                "In addition to the Phoenix Games rules, compliance with Discord's Community Guidelines is mandatory.",
+
+            view_guidelines:
+                "View Discord Community Guidelines",
+
+            join_rules_title:
+                "🔥 Join the Phoenix Games Community!",
+
+            join_rules_description:
+                "Follow the rules, respect community members, and have fun!",
+
+            go_to_community:
+                "Go to Community"
+
+        });
+
+        function updatePageTitle() {
+
+            document.title = document.documentElement.lang === "en"
+                ? "Phoenix Games | Rules"
+                : "Phoenix Games | Szabályzat";
+
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            updatePageTitle();
+
+            document.querySelectorAll("[data-language]").forEach(button => {
+
+                button.addEventListener("click", updatePageTitle);
+
+            });
+
+        });
+
+    </script>
 
 </body>
 </html>
