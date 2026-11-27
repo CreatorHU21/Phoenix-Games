@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="hu">
 <head>
@@ -12,6 +13,8 @@
 
 <body>
 
+    <!-- NAVIGÁCIÓ -->
+
     <header>
 
         <div class="logo">
@@ -22,13 +25,37 @@
         </div>
 
         <nav id="menu">
-            <a href="index.html">Főoldal</a>
-            <a href="games.html">Játékaink</a>
-            <a href="economy.html">Gazdaság</a>
-            <a href="shop.html">Shop</a>
-            <a href="rules.html">Szabályzat</a>
-            <a href="community.html">Közösség</a>
+
+            <a href="index.html" data-lang="home">Főoldal</a>
+            <a href="games.html" data-lang="games" aria-current="page">Játékaink</a>
+            <a href="economy.html" data-lang="economy">Gazdaság</a>
+            <a href="shop.html" data-lang="shop">Shop</a>
+            <a href="rules.html" data-lang="rules">Szabályzat</a>
+            <a href="community.html" data-lang="community">Közösség</a>
+
         </nav>
+
+        <!-- NYELVVÁLTÓ -->
+
+        <div class="language-switcher">
+
+            <button type="button"
+                    class="language-button active"
+                    data-language="hu"
+                    aria-label="Magyar"
+                    aria-pressed="true">
+                🇭🇺 HU
+            </button>
+
+            <button type="button"
+                    class="language-button"
+                    data-language="en"
+                    aria-label="English"
+                    aria-pressed="false">
+                🇬🇧 EN
+            </button>
+
+        </div>
 
         <button id="menu-button"
                 type="button"
@@ -41,98 +68,196 @@
 
     <main>
 
+        <!-- JÁTÉKOK BEMUTATÁSA -->
+
         <section class="hero">
 
             <p class="subtitle">PHOENIX GAMING</p>
 
-            <h1>JÁTÉKAINK</h1>
+            <h1 data-lang="gaming_title">JÁTÉKAINK</h1>
 
-            <p>
+            <p data-lang="gaming_description">
                 Találd meg kedvenc játékodat,
                 keress csapattársakat, és szerezz
                 közös élményeket!
             </p>
 
-            <a class="button" href="#game-list">
+            <a class="button"
+               href="#game-list"
+               data-lang="discover_games">
                 Játékok felfedezése
             </a>
 
         </section>
 
+        <!-- TÁMOGATOTT JÁTÉKOK -->
+
         <section id="game-list">
 
-            <h2>🎮 Támogatott játékok</h2>
+            <h2 data-lang="supported_games">
+                🎮 Támogatott játékok
+            </h2>
 
             <div class="cards">
 
+                <!-- COUNTER-STRIKE 2 -->
+
                 <article class="card">
+
                     <h3>Counter-Strike 2</h3>
-                    <p>Taktikai FPS, kompetitív mérkőzések és közös csapatjáték.</p>
+
+                    <p data-lang="cs2_description">
+                        Taktikai FPS, kompetitív mérkőzések
+                        és közös csapatjáték.
+                    </p>
+
                     <p><strong>FPS | Competitive</strong></p>
-                    <a class="button" href="https://www.counter-strike.net/" target="_blank" rel="noopener noreferrer">
+
+                    <a class="button"
+                       href="https://www.counter-strike.net/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       data-lang="official_website">
                         Hivatalos weboldal
                     </a>
+
                 </article>
 
+                <!-- VALORANT -->
+
                 <article class="card">
+
                     <h3>VALORANT</h3>
-                    <p>Taktikai lövöldözős játék egyedi karakterekkel és képességekkel.</p>
+
+                    <p data-lang="valorant_description">
+                        Taktikai lövöldözős játék egyedi
+                        karakterekkel és képességekkel.
+                    </p>
+
                     <p><strong>FPS | Competitive</strong></p>
-                    <a class="button" href="https://playvalorant.com/" target="_blank" rel="noopener noreferrer">
+
+                    <a class="button"
+                       href="https://playvalorant.com/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       data-lang="official_website">
                         Hivatalos weboldal
                     </a>
+
                 </article>
 
+                <!-- RAINBOW SIX SIEGE -->
+
                 <article class="card">
+
                     <h3>Rainbow Six Siege</h3>
-                    <p>Stratégiai csapatjáték, különleges operátorok és taktikai összecsapások.</p>
+
+                    <p data-lang="r6_description">
+                        Stratégiai csapatjáték, különleges
+                        operátorok és taktikai összecsapások.
+                    </p>
+
                     <p><strong>FPS | Tactical</strong></p>
-                    <a class="button" href="https://www.ubisoft.com/game/rainbow-six/siege" target="_blank" rel="noopener noreferrer">
+
+                    <a class="button"
+                       href="https://www.ubisoft.com/game/rainbow-six/siege"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       data-lang="official_website">
                         Hivatalos weboldal
                     </a>
+
                 </article>
 
+                <!-- PUBG -->
+
                 <article class="card">
+
                     <h3>PUBG</h3>
-                    <p>Battle Royale élmény, túlélés és izgalmas csapatmérkőzések.</p>
+
+                    <p data-lang="pubg_description">
+                        Battle Royale élmény, túlélés
+                        és izgalmas csapatmérkőzések.
+                    </p>
+
                     <p><strong>Battle Royale</strong></p>
-                    <a class="button" href="https://pubg.com/" target="_blank" rel="noopener noreferrer">
+
+                    <a class="button"
+                       href="https://pubg.com/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       data-lang="official_website">
                         Hivatalos weboldal
                     </a>
+
                 </article>
 
+                <!-- WARZONE -->
+
                 <article class="card">
+
                     <h3>Call of Duty: Warzone</h3>
-                    <p>Akciódús összecsapások és közös Battle Royale mérkőzések.</p>
+
+                    <p data-lang="warzone_description">
+                        Akciódús összecsapások és közös
+                        Battle Royale mérkőzések.
+                    </p>
+
                     <p><strong>FPS | Battle Royale</strong></p>
-                    <a class="button" href="https://www.callofduty.com/warzone" target="_blank" rel="noopener noreferrer">
+
+                    <a class="button"
+                       href="https://www.callofduty.com/warzone"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       data-lang="official_website">
                         Hivatalos weboldal
                     </a>
+
                 </article>
 
+                <!-- MINECRAFT -->
+
                 <article class="card">
+
                     <h3>Minecraft</h3>
-                    <p>Közös túlélés, építkezés, felfedezés és kreatív alkotás.</p>
+
+                    <p data-lang="minecraft_description">
+                        Közös túlélés, építkezés,
+                        felfedezés és kreatív alkotás.
+                    </p>
+
                     <p><strong>Survival | Sandbox</strong></p>
-                    <a class="button" href="https://www.minecraft.net/" target="_blank" rel="noopener noreferrer">
+
+                    <a class="button"
+                       href="https://www.minecraft.net/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       data-lang="official_website">
                         Hivatalos weboldal
                     </a>
+
                 </article>
 
             </div>
 
         </section>
 
+        <!-- CSAPATKERESÉS -->
+
         <section id="team">
 
-            <h2>👥 Csapattársat keresel?</h2>
+            <h2 data-lang="team_title">
+                👥 Csapattársat keresel?
+            </h2>
 
-            <p>
+            <p data-lang="team_description">
                 Csatlakozz a Phoenix Games Discord-közösségéhez,
                 ismerj meg új játékosokat, és alakítsatok csapatot!
             </p>
 
-            <a class="button" href="community.html">
+            <a class="button"
+               href="community.html"
+               data-lang="view_community">
                 Közösség megtekintése
             </a>
 
@@ -140,12 +265,122 @@
 
     </main>
 
+    <!-- LÁBLÉC -->
+
     <footer>
+
         <p>© 2026 Phoenix Games</p>
+
         <p>PLAY. EARN. RISE.</p>
+
     </footer>
 
     <script src="script.js"></script>
+    <script src="language.js"></script>
+
+    <!-- JÁTÉKOK OLDAL FORDÍTÁSAI -->
+
+    <script>
+
+        Object.assign(translations.hu, {
+
+            gaming_title: "JÁTÉKAINK",
+
+            gaming_description:
+                "Találd meg kedvenc játékodat, keress csapattársakat, és szerezz közös élményeket!",
+
+            discover_games: "Játékok felfedezése",
+
+            supported_games: "🎮 Támogatott játékok",
+
+            official_website: "Hivatalos weboldal",
+
+            cs2_description:
+                "Taktikai FPS, kompetitív mérkőzések és közös csapatjáték.",
+
+            valorant_description:
+                "Taktikai lövöldözős játék egyedi karakterekkel és képességekkel.",
+
+            r6_description:
+                "Stratégiai csapatjáték, különleges operátorok és taktikai összecsapások.",
+
+            pubg_description:
+                "Battle Royale élmény, túlélés és izgalmas csapatmérkőzések.",
+
+            warzone_description:
+                "Akciódús összecsapások és közös Battle Royale mérkőzések.",
+
+            minecraft_description:
+                "Közös túlélés, építkezés, felfedezés és kreatív alkotás.",
+
+            team_title:
+                "👥 Csapattársat keresel?",
+
+            team_description:
+                "Csatlakozz a Phoenix Games Discord-közösségéhez, ismerj meg új játékosokat, és alakítsatok csapatot!"
+
+        });
+
+        Object.assign(translations.en, {
+
+            gaming_title: "OUR GAMES",
+
+            gaming_description:
+                "Find your favorite game, meet new teammates, and create memorable experiences together!",
+
+            discover_games: "Discover Games",
+
+            supported_games: "🎮 Supported Games",
+
+            official_website: "Official Website",
+
+            cs2_description:
+                "Tactical FPS gameplay, competitive matches, and teamwork.",
+
+            valorant_description:
+                "A tactical shooter featuring unique characters and abilities.",
+
+            r6_description:
+                "Strategic team-based gameplay, unique operators, and tactical combat.",
+
+            pubg_description:
+                "Battle Royale action, survival, and exciting team matches.",
+
+            warzone_description:
+                "Action-packed combat and team-based Battle Royale matches.",
+
+            minecraft_description:
+                "Survive, build, explore, and create together.",
+
+            team_title:
+                "👥 Looking for Teammates?",
+
+            team_description:
+                "Join the Phoenix Games Discord community, meet new players, and form your own team!"
+
+        });
+
+        function updatePageTitle() {
+
+            document.title = document.documentElement.lang === "en"
+                ? "Phoenix Games | Games"
+                : "Phoenix Games | Játékaink";
+
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            updatePageTitle();
+
+            document.querySelectorAll("[data-language]").forEach(button => {
+
+                button.addEventListener("click", updatePageTitle);
+
+            });
+
+        });
+
+    </script>
 
 </body>
 </html>
