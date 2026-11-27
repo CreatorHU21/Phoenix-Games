@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="hu">
 <head>
@@ -12,6 +13,8 @@
 
 <body>
 
+    <!-- NAVIGÁCIÓ -->
+
     <header>
 
         <div class="logo">
@@ -22,13 +25,37 @@
         </div>
 
         <nav id="menu">
-            <a href="index.html">Főoldal</a>
-            <a href="games.html">Játékaink</a>
-            <a href="economy.html">Gazdaság</a>
-            <a href="shop.html">Shop</a>
-            <a href="rules.html">Szabályzat</a>
-            <a href="community.html">Közösség</a>
+
+            <a href="index.html" data-lang="home">Főoldal</a>
+            <a href="games.html" data-lang="games">Játékaink</a>
+            <a href="economy.html" data-lang="economy">Gazdaság</a>
+            <a href="shop.html" data-lang="shop" aria-current="page">Shop</a>
+            <a href="rules.html" data-lang="rules">Szabályzat</a>
+            <a href="community.html" data-lang="community">Közösség</a>
+
         </nav>
+
+        <!-- NYELVVÁLTÓ -->
+
+        <div class="language-switcher">
+
+            <button type="button"
+                    class="language-button active"
+                    data-language="hu"
+                    aria-label="Magyar"
+                    aria-pressed="true">
+                🇭🇺 HU
+            </button>
+
+            <button type="button"
+                    class="language-button"
+                    data-language="en"
+                    aria-label="English"
+                    aria-pressed="false">
+                🇬🇧 EN
+            </button>
+
+        </div>
 
         <button id="menu-button"
                 type="button"
@@ -49,17 +76,21 @@
 
             <h1>PHOENIX SHOP</h1>
 
-            <p>
+            <p data-lang="shop_hero">
                 Váltsd be PHX Coinjaidat különleges
                 közösségi jutalmakra, egyedi rangokra
                 és exkluzív lehetőségekre!
             </p>
 
-            <a class="button" href="#products">
+            <a class="button"
+               href="#products"
+               data-lang="view_products">
                 Termékek megtekintése
             </a>
 
-            <a class="button" href="economy.html">
+            <a class="button"
+               href="economy.html"
+               data-lang="how_to_earn">
                 Hogyan szerezhetek PHX Coint?
             </a>
 
@@ -69,122 +100,168 @@
 
         <section id="products">
 
-            <h2>🛒 Elérhető termékek</h2>
+            <h2 data-lang="products_title">
+                🛒 Elérhető termékek
+            </h2>
 
             <div class="cards">
 
+                <!-- EGYEDI NÉVSZÍN -->
+
                 <article class="card">
 
-                    <h3>🎨 Egyedi névszín</h3>
+                    <h3 data-lang="custom_color">
+                        🎨 Egyedi névszín
+                    </h3>
 
-                    <p>
+                    <p data-lang="custom_color_description">
                         Tedd egyedivé Discord-megjelenésedet
                         egy választott névszínnel!
                     </p>
 
-                    <p>Érvényesség: 7 nap</p>
+                    <p data-lang="validity_7">
+                        Érvényesség: 7 nap
+                    </p>
 
                     <p><strong>500 PHX Coin</strong></p>
 
-                    <a class="button" href="#purchase">
+                    <a class="button"
+                       href="#purchase"
+                       data-lang="purchase_guide">
                         Vásárlási útmutató
                     </a>
 
                 </article>
 
+                <!-- VIP RANG -->
+
                 <article class="card">
 
-                    <h3>👑 VIP rang</h3>
+                    <h3 data-lang="vip_role">
+                        👑 VIP rang
+                    </h3>
 
-                    <p>
+                    <p data-lang="vip_description">
                         Emelkedj ki a közösségből
                         egy különleges VIP ranggal!
                     </p>
 
-                    <p>Érvényesség: 7 nap</p>
+                    <p data-lang="validity_7">
+                        Érvényesség: 7 nap
+                    </p>
 
                     <p><strong>1 500 PHX Coin</strong></p>
 
-                    <a class="button" href="#purchase">
+                    <a class="button"
+                       href="#purchase"
+                       data-lang="purchase_guide">
                         Vásárlási útmutató
                     </a>
 
                 </article>
 
+                <!-- EGYEDI RANG -->
+
                 <article class="card">
 
-                    <h3>🌟 Egyedi rang</h3>
+                    <h3 data-lang="custom_role">
+                        🌟 Egyedi rang
+                    </h3>
 
-                    <p>
+                    <p data-lang="custom_role_description">
                         Szerezz saját, személyre szabott
                         Discord-rangot!
                     </p>
 
-                    <p>Érvényesség: 30 nap</p>
+                    <p data-lang="validity_30">
+                        Érvényesség: 30 nap
+                    </p>
 
                     <p><strong>3 000 PHX Coin</strong></p>
 
-                    <a class="button" href="#purchase">
+                    <a class="button"
+                       href="#purchase"
+                       data-lang="purchase_guide">
                         Vásárlási útmutató
                     </a>
 
                 </article>
+
+                <!-- PHOENIX ELITE -->
 
                 <article class="card">
 
                     <h3>💎 Phoenix Elite</h3>
 
-                    <p>
+                    <p data-lang="elite_description">
                         Szerezz állandó, különleges
                         közösségi rangot, amely
                         megkülönböztet a többi tagtól!
                     </p>
 
-                    <p>Érvényesség: Állandó</p>
+                    <p data-lang="validity_permanent">
+                        Érvényesség: Állandó
+                    </p>
 
                     <p><strong>5 000 PHX Coin</strong></p>
 
-                    <a class="button" href="#purchase">
+                    <a class="button"
+                       href="#purchase"
+                       data-lang="purchase_guide">
                         Vásárlási útmutató
                     </a>
 
                 </article>
 
+                <!-- EGYEDI HANGCSATORNA -->
+
                 <article class="card">
 
-                    <h3>🔊 Egyedi voice szoba</h3>
+                    <h3 data-lang="custom_voice">
+                        🔊 Egyedi voice szoba
+                    </h3>
 
-                    <p>
+                    <p data-lang="custom_voice_description">
                         Szerezz saját hangcsatornát,
                         ahol barátaiddal közösen
                         beszélgethetsz és játszhatsz!
                     </p>
 
-                    <p>Érvényesség: 30 nap</p>
+                    <p data-lang="validity_30">
+                        Érvényesség: 30 nap
+                    </p>
 
                     <p><strong>8 000 PHX Coin</strong></p>
 
-                    <a class="button" href="#purchase">
+                    <a class="button"
+                       href="#purchase"
+                       data-lang="purchase_guide">
                         Vásárlási útmutató
                     </a>
 
                 </article>
 
+                <!-- MYSTERY BOX -->
+
                 <article class="card">
 
                     <h3>🎁 Mystery Box</h3>
 
-                    <p>
+                    <p data-lang="mystery_box_description">
                         Próbálj szerencsét egy
                         meglepetésdobozzal, amely
                         véletlenszerű jutalmat tartalmaz!
                     </p>
 
-                    <p>Érvényesség: Jutalomtól függő</p>
+                    <p data-lang="validity_reward">
+                        Érvényesség: Jutalomtól függő
+                    </p>
 
                     <p><strong>750 PHX Coin</strong></p>
 
-                    <a class="button" href="#purchase">
+                    <a class="button"
+                       href="#purchase"
+                       data-lang="purchase_guide">
                         Vásárlási útmutató
                     </a>
 
@@ -198,15 +275,19 @@
 
         <section id="purchase">
 
-            <h2>📖 Hogyan vásárolhatsz?</h2>
+            <h2 data-lang="purchase_title">
+                📖 Hogyan vásárolhatsz?
+            </h2>
 
             <div class="cards">
 
                 <article class="card">
 
-                    <h3>01. Csatlakozz</h3>
+                    <h3 data-lang="purchase_step_1">
+                        01. Csatlakozz
+                    </h3>
 
-                    <p>
+                    <p data-lang="purchase_step_1_description">
                         Lépj be a Phoenix Games
                         Discord-szerverére!
                     </p>
@@ -215,9 +296,11 @@
 
                 <article class="card">
 
-                    <h3>02. Szerezz PHX Coint</h3>
+                    <h3 data-lang="purchase_step_2">
+                        02. Szerezz PHX Coint
+                    </h3>
 
-                    <p>
+                    <p data-lang="purchase_step_2_description">
                         Használd a gazdasági rendszer
                         pénzkereseti parancsait!
                     </p>
@@ -226,9 +309,11 @@
 
                 <article class="card">
 
-                    <h3>03. Válassz terméket</h3>
+                    <h3 data-lang="purchase_step_3">
+                        03. Válassz terméket
+                    </h3>
 
-                    <p>
+                    <p data-lang="purchase_step_3_description">
                         Válaszd ki a számodra
                         legmegfelelőbb jutalmat!
                     </p>
@@ -237,9 +322,11 @@
 
                 <article class="card">
 
-                    <h3>04. Vásárlás</h3>
+                    <h3 data-lang="purchase_step_4">
+                        04. Vásárlás
+                    </h3>
 
-                    <p>
+                    <p data-lang="purchase_step_4_description">
                         A Discord-szerveren található
                         gazdasági rendszer segítségével
                         vásárold meg a terméket!
@@ -249,7 +336,9 @@
 
             </div>
 
-            <a class="button" href="community.html">
+            <a class="button"
+               href="community.html"
+               data-lang="go_to_community">
                 Tovább a közösséghez
             </a>
 
@@ -259,15 +348,19 @@
 
         <section id="faq">
 
-            <h2>❓ Gyakran ismételt kérdések</h2>
+            <h2 data-lang="faq_title">
+                ❓ Gyakran ismételt kérdések
+            </h2>
 
             <div class="cards">
 
                 <article class="card">
 
-                    <h3>Valódi pénzzel kell fizetni?</h3>
+                    <h3 data-lang="faq_1_question">
+                        Valódi pénzzel kell fizetni?
+                    </h3>
 
-                    <p>
+                    <p data-lang="faq_1_answer">
                         Nem. A felsorolt termékek
                         PHX Coinnal vásárolhatók meg.
                     </p>
@@ -276,9 +369,11 @@
 
                 <article class="card">
 
-                    <h3>Hol történik a vásárlás?</h3>
+                    <h3 data-lang="faq_2_question">
+                        Hol történik a vásárlás?
+                    </h3>
 
-                    <p>
+                    <p data-lang="faq_2_answer">
                         A vásárlás a Phoenix Games
                         Discord-szerverén történik.
                         Ez a weboldal a termékek
@@ -289,9 +384,11 @@
 
                 <article class="card">
 
-                    <h3>Mi történik az idő lejártakor?</h3>
+                    <h3 data-lang="faq_3_question">
+                        Mi történik az idő lejártakor?
+                    </h3>
 
-                    <p>
+                    <p data-lang="faq_3_answer">
                         Az időszakos jutalmak
                         a meghatározott érvényességi
                         idő végén lejárnak.
@@ -301,9 +398,11 @@
 
                 <article class="card">
 
-                    <h3>Változhatnak az árak?</h3>
+                    <h3 data-lang="faq_4_question">
+                        Változhatnak az árak?
+                    </h3>
 
-                    <p>
+                    <p data-lang="faq_4_answer">
                         Igen. A közösség fejlődésével
                         az árak és az elérhető
                         termékek változhatnak.
@@ -319,15 +418,19 @@
 
         <section id="earn">
 
-            <h2>💰 Nincs elegendő PHX Coinod?</h2>
+            <h2 data-lang="earn_more_title">
+                💰 Nincs elegendő PHX Coinod?
+            </h2>
 
-            <p>
+            <p data-lang="earn_more_description">
                 Ismerd meg a gazdasági rendszer
                 pénzkereseti lehetőségeit, és
                 kezdj el gyűjteni a következő jutalmadra!
             </p>
 
-            <a class="button" href="economy.html">
+            <a class="button"
+               href="economy.html"
+               data-lang="view_phx_economy">
                 PHX Economy megtekintése
             </a>
 
@@ -335,12 +438,278 @@
 
     </main>
 
+    <!-- LÁBLÉC -->
+
     <footer>
+
         <p>© 2026 Phoenix Games</p>
+
         <p>PLAY. EARN. RISE.</p>
+
     </footer>
 
     <script src="script.js"></script>
+    <script src="language.js"></script>
+
+    <!-- MAGYAR ÉS ANGOL FORDÍTÁSOK -->
+
+    <script>
+
+        Object.assign(translations.hu, {
+
+            shop_hero:
+                "Váltsd be PHX Coinjaidat különleges közösségi jutalmakra, egyedi rangokra és exkluzív lehetőségekre!",
+
+            view_products:
+                "Termékek megtekintése",
+
+            how_to_earn:
+                "Hogyan szerezhetek PHX Coint?",
+
+            products_title:
+                "🛒 Elérhető termékek",
+
+            custom_color:
+                "🎨 Egyedi névszín",
+
+            custom_color_description:
+                "Tedd egyedivé Discord-megjelenésedet egy választott névszínnel!",
+
+            vip_role:
+                "👑 VIP rang",
+
+            vip_description:
+                "Emelkedj ki a közösségből egy különleges VIP ranggal!",
+
+            custom_role:
+                "🌟 Egyedi rang",
+
+            custom_role_description:
+                "Szerezz saját, személyre szabott Discord-rangot!",
+
+            elite_description:
+                "Szerezz állandó, különleges közösségi rangot, amely megkülönböztet a többi tagtól!",
+
+            custom_voice:
+                "🔊 Egyedi voice szoba",
+
+            custom_voice_description:
+                "Szerezz saját hangcsatornát, ahol barátaiddal közösen beszélgethetsz és játszhatsz!",
+
+            mystery_box_description:
+                "Próbálj szerencsét egy meglepetésdobozzal, amely véletlenszerű jutalmat tartalmaz!",
+
+            validity_7:
+                "Érvényesség: 7 nap",
+
+            validity_30:
+                "Érvényesség: 30 nap",
+
+            validity_permanent:
+                "Érvényesség: Állandó",
+
+            validity_reward:
+                "Érvényesség: Jutalomtól függő",
+
+            purchase_guide:
+                "Vásárlási útmutató",
+
+            purchase_title:
+                "📖 Hogyan vásárolhatsz?",
+
+            purchase_step_1:
+                "01. Csatlakozz",
+
+            purchase_step_1_description:
+                "Lépj be a Phoenix Games Discord-szerverére!",
+
+            purchase_step_2:
+                "02. Szerezz PHX Coint",
+
+            purchase_step_2_description:
+                "Használd a gazdasági rendszer pénzkereseti parancsait!",
+
+            purchase_step_3:
+                "03. Válassz terméket",
+
+            purchase_step_3_description:
+                "Válaszd ki a számodra legmegfelelőbb jutalmat!",
+
+            purchase_step_4:
+                "04. Vásárlás",
+
+            purchase_step_4_description:
+                "A Discord-szerveren található gazdasági rendszer segítségével vásárold meg a terméket!",
+
+            go_to_community:
+                "Tovább a közösséghez",
+
+            faq_title:
+                "❓ Gyakran ismételt kérdések",
+
+            faq_1_question:
+                "Valódi pénzzel kell fizetni?",
+
+            faq_1_answer:
+                "Nem. A felsorolt termékek PHX Coinnal vásárolhatók meg.",
+
+            faq_2_question:
+                "Hol történik a vásárlás?",
+
+            faq_2_answer:
+                "A vásárlás a Phoenix Games Discord-szerverén történik. Ez a weboldal a termékek bemutatására szolgál.",
+
+            faq_3_question:
+                "Mi történik az idő lejártakor?",
+
+            faq_3_answer:
+                "Az időszakos jutalmak a meghatározott érvényességi idő végén lejárnak.",
+
+            faq_4_question:
+                "Változhatnak az árak?",
+
+            faq_4_answer:
+                "Igen. A közösség fejlődésével az árak és az elérhető termékek változhatnak.",
+
+            earn_more_title:
+                "💰 Nincs elegendő PHX Coinod?",
+
+            earn_more_description:
+                "Ismerd meg a gazdasági rendszer pénzkereseti lehetőségeit, és kezdj el gyűjteni a következő jutalmadra!",
+
+            view_phx_economy:
+                "PHX Economy megtekintése"
+
+        });
+
+        Object.assign(translations.en, {
+
+            shop_hero:
+                "Redeem your PHX Coins for special community rewards, custom roles, and exclusive benefits!",
+
+            view_products:
+                "View Products",
+
+            how_to_earn:
+                "How Can I Earn PHX Coins?",
+
+            products_title:
+                "🛒 Available Products",
+
+            custom_color:
+                "🎨 Custom Name Color",
+
+            custom_color_description:
+                "Personalize your Discord appearance with a name color of your choice!",
+
+            vip_role:
+                "👑 VIP Role",
+
+            vip_description:
+                "Stand out from the community with an exclusive VIP role!",
+
+            custom_role:
+                "🌟 Custom Role",
+
+            custom_role_description:
+                "Get your own personalized Discord role!",
+
+            elite_description:
+                "Unlock a permanent, exclusive community role that sets you apart from other members!",
+
+            custom_voice:
+                "🔊 Custom Voice Channel",
+
+            custom_voice_description:
+                "Get your own voice channel where you can chat and play games with your friends!",
+
+            mystery_box_description:
+                "Try your luck with a mystery box containing a random reward!",
+
+            validity_7:
+                "Duration: 7 days",
+
+            validity_30:
+                "Duration: 30 days",
+
+            validity_permanent:
+                "Duration: Permanent",
+
+            validity_reward:
+                "Duration: Depends on the reward",
+
+            purchase_guide:
+                "Purchase Guide",
+
+            purchase_title:
+                "📖 How to Purchase?",
+
+            purchase_step_1:
+                "01. Join",
+
+            purchase_step_1_description:
+                "Join the Phoenix Games Discord server!",
+
+            purchase_step_2:
+                "02. Earn PHX Coins",
+
+            purchase_step_2_description:
+                "Use the available economy commands to earn money!",
+
+            purchase_step_3:
+                "03. Choose a Product",
+
+            purchase_step_3_description:
+                "Choose the reward that suits you best!",
+
+            purchase_step_4:
+                "04. Purchase",
+
+            purchase_step_4_description:
+                "Purchase your chosen product using the economy system on our Discord server!",
+
+            go_to_community:
+                "Go to Community",
+
+            faq_title:
+                "❓ Frequently Asked Questions",
+
+            faq_1_question:
+                "Do I Need to Pay with Real Money?",
+
+            faq_1_answer:
+                "No. All listed products can be purchased with PHX Coins.",
+
+            faq_2_question:
+                "Where Can I Make a Purchase?",
+
+            faq_2_answer:
+                "Purchases take place on the Phoenix Games Discord server. This website serves as a product showcase.",
+
+            faq_3_question:
+                "What Happens When a Reward Expires?",
+
+            faq_3_answer:
+                "Temporary rewards expire at the end of their specified duration.",
+
+            faq_4_question:
+                "Can Prices Change?",
+
+            faq_4_answer:
+                "Yes. Prices and available products may change as the community develops.",
+
+            earn_more_title:
+                "💰 Not Enough PHX Coins?",
+
+            earn_more_description:
+                "Explore the available ways to earn money and start saving for your next reward!",
+
+            view_phx_economy:
+                "View PHX Economy"
+
+        });
+
+    </script>
 
 </body>
 </html>
