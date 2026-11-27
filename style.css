@@ -414,3 +414,57 @@ nav a.current-page::after {
 .card:has(> .button) > p:last-of-type {
     margin-bottom: 25px;
 }
+/* PHOENIX GAMES - NYELVVÁLTÓ */
+
+.language-switcher {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.language-button {
+    background: #17181c;
+    color: #c0c0c0;
+    border: 1px solid #353535;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.language-button:hover {
+    color: var(--green);
+    border-color: var(--green);
+}
+
+.language-button.active {
+    background: var(--green);
+    color: #080808;
+    border-color: var(--green);
+    box-shadow: 0 0 12px #76ff0340;
+}
+
+@media (max-width: 1100px) {
+    header {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .language-switcher {
+        gap: 5px;
+        margin-left: auto;
+    }
+
+    .language-button {
+        padding: 6px 8px;
+        font-size: 12px;
+    }
+}
