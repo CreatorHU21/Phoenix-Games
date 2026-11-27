@@ -383,3 +383,13 @@ button:focus-visible {
         transition: none !important;
     }
 }
+/* AKTUÁLIS OLDAL KIEMELÉSE */
+
+nav a.current-page {
+    color: var(--green);
+    text-shadow: 0 0 10px #76ff0355;
+}
+
+nav a.current-page::after {
+    width: 100%;
+}
