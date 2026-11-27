@@ -1,49 +1,101 @@
+/* PHOENIX GAMES - DESIGN V2.0 */
+
+:root {
+    --background: #08090b;
+    --panel: #141519;
+    --red: #ff2020;
+    --green: #76ff03;
+    --silver: #c0c0c0;
+    --white: #ffffff;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
     scroll-behavior: smooth;
 }
 
 body {
-    background: #0b0c10;
-    color: #ffffff;
+    background: var(--background);
+    color: var(--white);
     font-family: Arial, sans-serif;
     line-height: 1.6;
 }
+
+/* NAVIGÁCIÓS MENÜ */
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 5%;
-    background: #14151b;
-    border-bottom: 2px solid #ff4500;
+    padding: 15px 5%;
+    background: rgba(15, 16, 20, 0.96);
+    backdrop-filter: blur(15px);
+    border-bottom: 2px solid var(--red);
+    box-shadow: 0 0 20px #ff202025;
     position: sticky;
     top: 0;
     z-index: 100;
 }
 
 .logo {
-    color: #ff5722;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--red);
     font-size: 22px;
     font-weight: bold;
+    text-shadow: 0 0 12px #ff202055;
+}
+
+.logo-img {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--red);
+    box-shadow: 0 0 15px #ff202055;
 }
 
 nav {
     display: flex;
+    align-items: center;
     gap: 25px;
 }
 
 nav a {
-    color: white;
+    position: relative;
+    color: var(--silver);
     text-decoration: none;
+    font-weight: bold;
+    padding: 8px 0;
     transition: 0.3s;
 }
 
-nav a:hover {
-    color: #ff5722;
+nav a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--green);
+    transition: width 0.3s;
 }
+
+nav a:hover {
+    color: var(--green);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* FŐOLDAL */
 
 .hero {
     min-height: 75vh;
@@ -52,103 +104,228 @@ nav a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 40px 20px;
-    background: radial-gradient(
-        ellipse at center,
-        #54200e,
-        #0b0c10 70%
-    );
+    padding: 60px 20px;
+    background:
+        radial-gradient(
+            ellipse at center,
+            #ff000025,
+            transparent 70%
+        ),
+        var(--background);
 }
 
 .hero h1 {
-    font-size: clamp(42px, 8vw, 85px);
-    color: #ff5722;
-    text-shadow: 0 0 35px #ff450066;
+    font-size: clamp(38px, 8vw, 85px);
+    font-weight: 900;
+    color: var(--red);
+    text-shadow: 0 0 30px #ff202070;
+    margin: 15px 0;
+    letter-spacing: 3px;
+}
+
+.hero p {
+    max-width: 800px;
 }
 
 .subtitle {
-    letter-spacing: 5px;
-    color: #ff9800;
+    letter-spacing: 6px;
+    color: var(--green);
     font-weight: bold;
+    text-shadow: 0 0 12px #76ff0355;
 }
+
+/* BANNER */
+
+.banner {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    display: block;
+    margin: 0 auto 30px;
+    border-radius: 14px;
+    border: 1px solid var(--red);
+    box-shadow: 0 0 30px #ff202040;
+}
+
+/* GOMBOK */
 
 .button {
     display: inline-block;
     margin-top: 30px;
-    padding: 15px 30px;
-    background: #ff4500;
+    padding: 15px 32px;
+    background: linear-gradient(
+        135deg,
+        #ff2020,
+        #a00000
+    );
     color: white;
     text-decoration: none;
+    border: 1px solid var(--red);
     border-radius: 8px;
     font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 20px #ff202040;
     transition: 0.3s;
 }
 
 .button:hover {
-    background: #ff6d00;
-    transform: translateY(-3px);
+    background: var(--green);
+    color: #080808;
+    border-color: var(--green);
+    transform: translateY(-4px);
+    box-shadow: 0 0 25px #76ff0370;
 }
+
+.button:active {
+    transform: scale(0.96);
+}
+
+/* SZEKCIÓK */
 
 section {
     padding: 65px 8%;
-    scroll-margin-top: 100px;
+    scroll-margin-top: 110px;
 }
 
 h2 {
-    font-size: 32px;
+    font-size: clamp(25px, 4vw, 34px);
     margin-bottom: 25px;
-    color: #ff5722;
+    color: var(--green);
+    border-left: 4px solid var(--red);
+    padding-left: 15px;
 }
+
+/* KÁRTYÁK */
 
 .cards {
     display: grid;
     grid-template-columns: repeat(
         auto-fit, minmax(230px, 1fr)
     );
-    gap: 20px;
+    gap: 22px;
     margin-top: 25px;
 }
 
 .card {
-    background: #171920;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(
+        145deg,
+        #1c1d22,
+        #101114
+    );
     border: 1px solid #30323b;
-    border-radius: 12px;
-    padding: 25px;
+    border-radius: 14px;
+    padding: 28px;
+    transition: 0.3s;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(
+        90deg,
+        var(--red),
+        var(--green)
+    );
+    opacity: 0;
     transition: 0.3s;
 }
 
 .card:hover {
-    border-color: #ff4500;
-    transform: translateY(-5px);
-    box-shadow: 0 0 20px #ff450025;
+    border-color: var(--green);
+    transform: translateY(-7px);
+    box-shadow: 0 0 25px #76ff0320;
+}
+
+.card:hover::before {
+    opacity: 1;
 }
 
 .card h3 {
-    margin-bottom: 10px;
+    color: white;
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+.card p {
+    color: var(--silver);
 }
 
 .card strong {
-    color: #ff9800;
+    color: var(--green);
+    font-size: 17px;
 }
 
+/* LÁBLÉC */
+
 footer {
-    background: #14151b;
+    background: #101114;
     text-align: center;
-    padding: 30px;
-    color: #aaaaaa;
-    border-top: 1px solid #ff4500;
+    padding: 35px;
+    color: var(--silver);
+    border-top: 2px solid var(--red);
 }
+
+/* GÖRGETŐSÁV */
+
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+::-webkit-scrollbar-track {
+    background: #080808;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #b51a1a;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--red);
+}
+
+/* BILLENTYŰZETES NAVIGÁCIÓ */
+
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--green);
+    outline-offset: 5px;
+}
+
+/* MOBIL MENÜ */
 
 #menu-button {
     display: none;
     background: none;
     border: none;
-    color: white;
-    font-size: 28px;
+    color: var(--green);
+    font-size: 30px;
     cursor: pointer;
 }
 
+/* MOBIL OPTIMALIZÁLÁS */
+
 @media (max-width: 768px) {
+
+    header {
+        padding: 12px 5%;
+    }
+
+    .logo {
+        font-size: 17px;
+    }
+
+    .logo-img {
+        width: 42px;
+        height: 42px;
+    }
+
     #menu-button {
         display: block;
     }
@@ -159,38 +336,50 @@ footer {
         top: 100%;
         left: 0;
         width: 100%;
-        background: #14151b;
+        background: #141519;
         padding: 25px;
         flex-direction: column;
+        border-bottom: 2px solid var(--red);
     }
 
     nav.active {
         display: flex;
     }
+
+    .hero {
+        min-height: 60vh;
+        padding: 30px 15px;
+    }
+
+    .hero h1 {
+        letter-spacing: 1px;
+    }
+
+    .subtitle {
+        letter-spacing: 3px;
+    }
+
+    section {
+        padding: 40px 5%;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .banner {
+        border-radius: 8px;
+    }
 }
-/* Phoenix Games logó */
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
+/* CSÖKKENTETT ANIMÁCIÓ */
 
-.logo-img {
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-    border-radius: 50%;
-}
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
 
-/* Phoenix Games banner */
-
-.banner {
-    width: 100%;
-    max-width: 1200px;
-    height: auto;
-    display: block;
-    margin: 0 auto 30px;
-    border-radius: 12px;
-    box-shadow: 0 0 25px rgba(255, 0, 0, 0.3);
+    * {
+        transition: none !important;
+    }
 }
