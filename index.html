@@ -3,125 +3,244 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phoenix Games</title>
+
+    <meta name="description" content="Phoenix Games - Magyar gaming közösség, közös játékok, PHX Economy és exkluzív jutalmak.">
+
+    <meta name="theme-color" content="#08090b">
+
+    <title>Phoenix Games | Főoldal</title>
+
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="logo.png">
+
 </head>
+
 <body>
 
+    <!-- NAVIGÁCIÓ -->
+
     <header>
+
         <div class="logo">
-    <img src="logo.png" alt="Phoenix Games" class="logo-img">
-    <span>PHOENIX GAMES</span>
-</div>
+            <a href="index.html">
+                <img src="logo.png" alt="Phoenix Games főoldal" class="logo-img">
+            </a>
+            <span>PHOENIX GAMES</span>
+        </div>
 
         <nav id="menu">
-            <a href="#home">Főoldal</a>
-            <a href="#games">Játékaink</a>
-            <a href="#economy">Gazdaság</a>
-            <a href="#shop">Shop</a>
-            <a href="#rules">Szabályzat</a>
+
+            <a href="index.html" aria-current="page">Főoldal</a>
+            <a href="games.html">Játékaink</a>
+            <a href="economy.html">Gazdaság</a>
+            <a href="shop.html">Shop</a>
+            <a href="rules.html">Szabályzat</a>
+            <a href="community.html">Közösség</a>
+
         </nav>
 
-        <button id="menu-button">☰</button>
+        <button id="menu-button"
+                type="button"
+                aria-label="Menü megnyitása"
+                aria-controls="menu">
+            ☰
+        </button>
+
     </header>
 
-    <section class="hero" id="home">
-        <img src="banner.jpg" alt="Phoenix Games" class="banner">
-        <p class="subtitle">PLAY. EARN. RISE.</p>
-        <h1>PHOENIX GAMES</h1>
-        <p>Egy közösség. Számtalan játék. Végtelen lehetőség.</p>
-        <a class="button" href="#games">Fedezd fel a közösséget</a>
-    </section>
+    <main>
 
-    <section id="games">
-        <h2>🎮 Játékaink</h2>
+        <!-- FŐOLDAL -->
 
-        <div class="cards">
-            <div class="card">Counter-Strike 2</div>
-            <div class="card">VALORANT</div>
-            <div class="card">Rainbow Six Siege</div>
-            <div class="card">PUBG</div>
-            <div class="card">Warzone</div>
-            <div class="card">Minecraft</div>
-        </div>
-    </section>
+        <section class="hero" id="home">
 
-    <section id="economy">
-        <h2>💰 PHX Economy</h2>
-        <p>Szerezz PHX Coint, építsd fel a vagyonodat, és vásárolj különleges jutalmakat!</p>
+            <img src="banner.jpg"
+                 alt="Phoenix Games banner"
+                 class="banner">
 
-        <div class="cards">
-            <div class="card">
-                <h3>💼 Munka</h3>
-                <p>/work</p>
-                <p>Biztonságos pénzkereset.</p>
+            <p class="subtitle">
+                PLAY. EARN. RISE.
+            </p>
+
+            <h1>PHOENIX GAMES</h1>
+
+            <p>
+                Egy közösség. Számtalan játék.
+                Végtelen lehetőség.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a class="button" href="community.html">
+                    Csatlakozz hozzánk!
+                </a>
+
+                <a class="button" href="#discover">
+                    Fedezd fel!
+                </a>
+
             </div>
 
-            <div class="card">
-                <h3>🗺️ Kaland</h3>
-                <p>/adventure</p>
-                <p>Próbálj szerencsét!</p>
+        </section>
+
+        <!-- BEMUTATKOZÁS -->
+
+        <section id="about">
+
+            <h2>🔥 Üdvözlünk a Phoenix Games közösségében!</h2>
+
+            <p>
+                A Phoenix Games egy magyar gaming közösség,
+                ahol játékosok találkozhatnak,
+                csapatokat alakíthatnak, közösen játszhatnak,
+                és különleges jutalmakat szerezhetnek.
+            </p>
+
+            <p>
+                Célunk egy barátságos, aktív és folyamatosan
+                fejlődő közösség létrehozása.
+            </p>
+
+        </section>
+
+        <!-- FELFEDEZÉS -->
+
+        <section id="discover">
+
+            <h2>🚀 Fedezd fel a lehetőségeket!</h2>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>🎮 Játékaink</h3>
+
+                    <p>
+                        Találd meg kedvenc játékodat,
+                        és keress magad mellé csapattársakat!
+                    </p>
+
+                    <a class="button" href="games.html">
+                        Játékok megtekintése
+                    </a>
+
+                </article>
+
+                <article class="card">
+
+                    <h3>💰 PHX Economy</h3>
+
+                    <p>
+                        Szerezz PHX Coint, teljesíts
+                        különböző feladatokat, és építsd
+                        fel virtuális vagyonodat!
+                    </p>
+
+                    <a class="button" href="economy.html">
+                        Gazdasági rendszer
+                    </a>
+
+                </article>
+
+                <article class="card">
+
+                    <h3>🛒 Phoenix Shop</h3>
+
+                    <p>
+                        Vásárolj különleges rangokat,
+                        egyedi névszíneket és egyéb
+                        közösségi jutalmakat!
+                    </p>
+
+                    <a class="button" href="shop.html">
+                        Shop megnyitása
+                    </a>
+
+                </article>
+
+                <article class="card">
+
+                    <h3>🏆 Rangrendszer</h3>
+
+                    <p>
+                        Légy aktív a közösségben,
+                        gyűjts XP-t, és szerezz
+                        magasabb rangokat!
+                    </p>
+
+                    <a class="button" href="community.html#ranks">
+                        Rangrendszer
+                    </a>
+
+                </article>
+
+                <article class="card">
+
+                    <h3>📜 Szabályzat</h3>
+
+                    <p>
+                        Ismerd meg a közösség szabályait,
+                        és segíts fenntartani a barátságos
+                        környezetet!
+                    </p>
+
+                    <a class="button" href="rules.html">
+                        Szabályzat megtekintése
+                    </a>
+
+                </article>
+
+                <article class="card">
+
+                    <h3>👥 Közösség</h3>
+
+                    <p>
+                        Csatlakozz Discord-szerverünkhöz,
+                        ismerj meg új játékosokat,
+                        és kövess minket!
+                    </p>
+
+                    <a class="button" href="community.html">
+                        Közösség megtekintése
+                    </a>
+
+                </article>
+
             </div>
 
-            <div class="card">
-                <h3>💰 Rablás</h3>
-                <p>/crime</p>
-                <p>Kockázatos pénzkereset.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="shop">
-        <h2>🛒 Phoenix Shop</h2>
+        <!-- CSATLAKOZÁS -->
 
-        <div class="cards">
-            <div class="card">
-                <h3>🎨 Egyedi névszín</h3>
-                <p>7 nap</p>
-                <strong>500 PHX Coin</strong>
-            </div>
+        <section id="join">
 
-            <div class="card">
-                <h3>👑 VIP rang</h3>
-                <p>7 nap</p>
-                <strong>1 500 PHX Coin</strong>
-            </div>
+            <h2>🔥 Légy te is a Phoenix Games tagja!</h2>
 
-            <div class="card">
-                <h3>🌟 Egyedi rang</h3>
-                <p>30 nap</p>
-                <strong>3 000 PHX Coin</strong>
-            </div>
+            <p>
+                Játssz, fejlődj, szerezz jutalmakat,
+                és építs velünk egy nagyszerű közösséget!
+            </p>
 
-            <div class="card">
-                <h3>💎 Phoenix Elite</h3>
-                <p>Állandó</p>
-                <strong>5 000 PHX Coin</strong>
-            </div>
+            <a class="button" href="community.html">
+                Csatlakozási lehetőségek
+            </a>
 
-            <div class="card">
-                <h3>🔊 Egyedi voice szoba</h3>
-                <p>30 nap</p>
-                <strong>8 000 PHX Coin</strong>
-            </div>
+        </section>
 
-            <div class="card">
-                <h3>🎁 Mystery Box</h3>
-                <p>Véletlenszerű jutalom</p>
-                <strong>750 PHX Coin</strong>
-            </div>
-        </div>
-    </section>
+    </main>
 
-    <section id="rules">
-        <h2>📜 Szabályzat</h2>
-        <p>A részletes szabályzat a Discord-szerverünkön olvasható.</p>
-    </section>
+    <!-- LÁBLÉC -->
 
     <footer>
+
         <p>© 2026 Phoenix Games</p>
+
         <p>PLAY. EARN. RISE.</p>
+
+        <p>
+            Magyar gaming közösség
+        </p>
+
     </footer>
 
     <script src="script.js"></script>
