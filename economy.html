@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="hu">
 <head>
@@ -12,6 +13,8 @@
 
 <body>
 
+    <!-- NAVIGÁCIÓ -->
+
     <header>
 
         <div class="logo">
@@ -22,13 +25,37 @@
         </div>
 
         <nav id="menu">
-            <a href="index.html">Főoldal</a>
-            <a href="games.html">Játékaink</a>
-            <a href="economy.html">Gazdaság</a>
-            <a href="shop.html">Shop</a>
-            <a href="rules.html">Szabályzat</a>
-            <a href="community.html">Közösség</a>
+
+            <a href="index.html" data-lang="home">Főoldal</a>
+            <a href="games.html" data-lang="games">Játékaink</a>
+            <a href="economy.html" data-lang="economy" aria-current="page">Gazdaság</a>
+            <a href="shop.html" data-lang="shop">Shop</a>
+            <a href="rules.html" data-lang="rules">Szabályzat</a>
+            <a href="community.html" data-lang="community">Közösség</a>
+
         </nav>
+
+        <!-- NYELVVÁLTÓ -->
+
+        <div class="language-switcher">
+
+            <button type="button"
+                    class="language-button active"
+                    data-language="hu"
+                    aria-label="Magyar"
+                    aria-pressed="true">
+                🇭🇺 HU
+            </button>
+
+            <button type="button"
+                    class="language-button"
+                    data-language="en"
+                    aria-label="English"
+                    aria-pressed="false">
+                🇬🇧 EN
+            </button>
+
+        </div>
 
         <button id="menu-button"
                 type="button"
@@ -49,17 +76,21 @@
 
             <h1>PHX ECONOMY</h1>
 
-            <p>
+            <p data-lang="economy_hero">
                 Dolgozz, próbálj szerencsét,
                 építsd fel virtuális vagyonodat,
                 és szerezz exkluzív jutalmakat!
             </p>
 
-            <a class="button" href="#commands">
+            <a class="button"
+               href="#commands"
+               data-lang="earning_methods">
                 Pénzkereseti lehetőségek
             </a>
 
-            <a class="button" href="shop.html">
+            <a class="button"
+               href="shop.html"
+               data-lang="open_phoenix_shop">
                 Phoenix Shop megnyitása
             </a>
 
@@ -69,14 +100,16 @@
 
         <section id="currency">
 
-            <h2>🪙 Mi az a PHX Coin?</h2>
+            <h2 data-lang="currency_title">
+                🪙 Mi az a PHX Coin?
+            </h2>
 
-            <p>
+            <p data-lang="currency_description">
                 A PHX Coin a Phoenix Games Discord-szerver
                 saját virtuális fizetőeszköze.
             </p>
 
-            <p>
+            <p data-lang="currency_usage">
                 Különböző gazdasági parancsok használatával
                 pénzt szerezhetsz, amelyet a Phoenix Shopban
                 különleges közösségi jutalmakra válthatsz be.
@@ -85,27 +118,42 @@
             <div class="cards">
 
                 <article class="card">
-                    <h3>💰 Pénzkeresés</h3>
-                    <p>
+
+                    <h3 data-lang="earn_title">
+                        💰 Pénzkeresés
+                    </h3>
+
+                    <p data-lang="earn_description">
                         Használd a gazdasági parancsokat,
                         és növeld az egyenlegedet!
                     </p>
+
                 </article>
 
                 <article class="card">
-                    <h3>🏦 Megtakarítás</h3>
-                    <p>
+
+                    <h3 data-lang="save_title">
+                        🏦 Megtakarítás
+                    </h3>
+
+                    <p data-lang="save_description">
                         Gyűjts PHX Coint a nagyobb
                         értékű jutalmak megszerzéséhez!
                     </p>
+
                 </article>
 
                 <article class="card">
-                    <h3>🛒 Vásárlás</h3>
-                    <p>
+
+                    <h3 data-lang="spend_title">
+                        🛒 Vásárlás
+                    </h3>
+
+                    <p data-lang="spend_description">
                         Költsd el a megszerzett PHX Coinokat
                         a Phoenix Shopban!
                     </p>
+
                 </article>
 
             </div>
@@ -116,56 +164,68 @@
 
         <section id="commands">
 
-            <h2>💸 Pénzkereseti lehetőségek</h2>
+            <h2 data-lang="commands_title">
+                💸 Pénzkereseti lehetőségek
+            </h2>
 
             <div class="cards">
 
                 <article class="card">
 
-                    <h3>💼 Munka</h3>
+                    <h3 data-lang="work_title">💼 Munka</h3>
 
                     <p><strong>/work</strong></p>
 
-                    <p>
+                    <p data-lang="work_description">
                         Dolgozz, és szerezz PHX Coint
                         biztonságos módon!
                     </p>
 
-                    <p>Kockázat: Alacsony</p>
+                    <p data-lang="risk_low">
+                        Kockázat: Alacsony
+                    </p>
 
                 </article>
 
                 <article class="card">
 
-                    <h3>🗺️ Kaland</h3>
+                    <h3 data-lang="adventure_title">🗺️ Kaland</h3>
 
                     <p><strong>/adventure</strong></p>
 
-                    <p>
+                    <p data-lang="adventure_description">
                         Indulj kalandra, próbálj szerencsét,
                         és szerezz jutalmakat!
                     </p>
 
-                    <p>Kockázat: Változó</p>
+                    <p data-lang="risk_variable">
+                        Kockázat: Változó
+                    </p>
 
-                    <p>Várakozási idő: 6 óra</p>
+                    <p data-lang="cooldown_6">
+                        Várakozási idő: 6 óra
+                    </p>
 
                 </article>
 
                 <article class="card">
 
-                    <h3>💰 Rablás</h3>
+                    <h3 data-lang="crime_title">💰 Rablás</h3>
 
                     <p><strong>/crime</strong></p>
 
-                    <p>
+                    <p data-lang="crime_description">
                         Vállalj nagyobb kockázatot
                         a virtuális pénz megszerzéséért!
                     </p>
 
-                    <p>Kockázat: Magas</p>
+                    <p data-lang="risk_high">
+                        Kockázat: Magas
+                    </p>
 
-                    <p>Várakozási idő: 6 óra</p>
+                    <p data-lang="cooldown_6">
+                        Várakozási idő: 6 óra
+                    </p>
 
                 </article>
 
@@ -177,40 +237,62 @@
 
         <section id="guide">
 
-            <h2>📖 Hogyan működik?</h2>
+            <h2 data-lang="guide_title">
+                📖 Hogyan működik?
+            </h2>
 
             <div class="cards">
 
                 <article class="card">
-                    <h3>01. Csatlakozás</h3>
-                    <p>
+
+                    <h3 data-lang="step_1_title">
+                        01. Csatlakozás
+                    </h3>
+
+                    <p data-lang="step_1_description">
                         Csatlakozz a Phoenix Games
                         Discord-szerveréhez!
                     </p>
+
                 </article>
 
                 <article class="card">
-                    <h3>02. Pénzkeresés</h3>
-                    <p>
+
+                    <h3 data-lang="step_2_title">
+                        02. Pénzkeresés
+                    </h3>
+
+                    <p data-lang="step_2_description">
                         Használd a gazdasági rendszer
                         elérhető parancsait!
                     </p>
+
                 </article>
 
                 <article class="card">
-                    <h3>03. Gyűjtögetés</h3>
-                    <p>
+
+                    <h3 data-lang="step_3_title">
+                        03. Gyűjtögetés
+                    </h3>
+
+                    <p data-lang="step_3_description">
                         Növeld az egyenlegedet,
                         és gyűjts a kiválasztott jutalomra!
                     </p>
+
                 </article>
 
                 <article class="card">
-                    <h3>04. Vásárlás</h3>
-                    <p>
+
+                    <h3 data-lang="step_4_title">
+                        04. Vásárlás
+                    </h3>
+
+                    <p data-lang="step_4_description">
                         Váltsd be PHX Coinjaidat
                         a Phoenix Shopban!
                     </p>
+
                 </article>
 
             </div>
@@ -221,49 +303,87 @@
 
         <section id="rewards">
 
-            <h2>🎁 Mire költheted a PHX Coinokat?</h2>
+            <h2 data-lang="rewards_title">
+                🎁 Mire költheted a PHX Coinokat?
+            </h2>
 
             <div class="cards">
 
                 <article class="card">
-                    <h3>🎨 Egyedi névszín</h3>
-                    <p>7 nap</p>
+
+                    <h3 data-lang="custom_color">
+                        🎨 Egyedi névszín
+                    </h3>
+
+                    <p data-lang="days_7">7 nap</p>
+
                     <strong>500 PHX Coin</strong>
+
                 </article>
 
                 <article class="card">
-                    <h3>👑 VIP rang</h3>
-                    <p>7 nap</p>
+
+                    <h3 data-lang="vip_role">
+                        👑 VIP rang
+                    </h3>
+
+                    <p data-lang="days_7">7 nap</p>
+
                     <strong>1 500 PHX Coin</strong>
+
                 </article>
 
                 <article class="card">
-                    <h3>🌟 Egyedi rang</h3>
-                    <p>30 nap</p>
+
+                    <h3 data-lang="custom_role">
+                        🌟 Egyedi rang
+                    </h3>
+
+                    <p data-lang="days_30">30 nap</p>
+
                     <strong>3 000 PHX Coin</strong>
+
                 </article>
 
                 <article class="card">
+
                     <h3>💎 Phoenix Elite</h3>
-                    <p>Állandó</p>
+
+                    <p data-lang="permanent">Állandó</p>
+
                     <strong>5 000 PHX Coin</strong>
+
                 </article>
 
                 <article class="card">
-                    <h3>🔊 Egyedi voice szoba</h3>
-                    <p>30 nap</p>
+
+                    <h3 data-lang="custom_voice">
+                        🔊 Egyedi voice szoba
+                    </h3>
+
+                    <p data-lang="days_30">30 nap</p>
+
                     <strong>8 000 PHX Coin</strong>
+
                 </article>
 
                 <article class="card">
+
                     <h3>🎁 Mystery Box</h3>
-                    <p>Véletlenszerű jutalom</p>
+
+                    <p data-lang="random_reward">
+                        Véletlenszerű jutalom
+                    </p>
+
                     <strong>750 PHX Coin</strong>
+
                 </article>
 
             </div>
 
-            <a class="button" href="shop.html">
+            <a class="button"
+               href="shop.html"
+               data-lang="view_products">
                 Összes termék megtekintése
             </a>
 
@@ -273,37 +393,56 @@
 
         <section id="information">
 
-            <h2>ℹ️ Fontos információk</h2>
+            <h2 data-lang="information_title">
+                ℹ️ Fontos információk
+            </h2>
 
             <div class="cards">
 
                 <article class="card">
-                    <h3>Virtuális fizetőeszköz</h3>
-                    <p>
+
+                    <h3 data-lang="virtual_currency_title">
+                        Virtuális fizetőeszköz
+                    </h3>
+
+                    <p data-lang="virtual_currency_description">
                         A PHX Coin nem valódi pénz,
                         és nem váltható át valódi pénzre.
                     </p>
+
                 </article>
 
                 <article class="card">
-                    <h3>Várakozási idők</h3>
-                    <p>
+
+                    <h3 data-lang="cooldowns_title">
+                        Várakozási idők
+                    </h3>
+
+                    <p data-lang="cooldowns_description">
                         Egyes parancsok használata után
                         várnod kell az újbóli használatig.
                     </p>
+
                 </article>
 
                 <article class="card">
-                    <h3>Változó gazdaság</h3>
-                    <p>
+
+                    <h3 data-lang="changing_economy_title">
+                        Változó gazdaság
+                    </h3>
+
+                    <p data-lang="changing_economy_description">
                         Az árak, jutalmak és gazdasági
                         beállítások idővel változhatnak.
                     </p>
+
                 </article>
 
             </div>
 
-            <a class="button" href="community.html">
+            <a class="button"
+               href="community.html"
+               data-lang="join_community">
                 Csatlakozz a közösséghez!
             </a>
 
@@ -311,12 +450,264 @@
 
     </main>
 
+    <!-- LÁBLÉC -->
+
     <footer>
+
         <p>© 2026 Phoenix Games</p>
+
         <p>PLAY. EARN. RISE.</p>
+
     </footer>
 
     <script src="script.js"></script>
+    <script src="language.js"></script>
+
+    <!-- MAGYAR ÉS ANGOL FORDÍTÁSOK -->
+
+    <script>
+
+        Object.assign(translations.hu, {
+
+            economy_hero:
+                "Dolgozz, próbálj szerencsét, építsd fel virtuális vagyonodat, és szerezz exkluzív jutalmakat!",
+
+            earning_methods: "Pénzkereseti lehetőségek",
+
+            open_phoenix_shop: "Phoenix Shop megnyitása",
+
+            currency_title: "🪙 Mi az a PHX Coin?",
+
+            currency_description:
+                "A PHX Coin a Phoenix Games Discord-szerver saját virtuális fizetőeszköze.",
+
+            currency_usage:
+                "Különböző gazdasági parancsok használatával pénzt szerezhetsz, amelyet a Phoenix Shopban különleges közösségi jutalmakra válthatsz be.",
+
+            earn_title: "💰 Pénzkeresés",
+
+            earn_description:
+                "Használd a gazdasági parancsokat, és növeld az egyenlegedet!",
+
+            save_title: "🏦 Megtakarítás",
+
+            save_description:
+                "Gyűjts PHX Coint a nagyobb értékű jutalmak megszerzéséhez!",
+
+            spend_title: "🛒 Vásárlás",
+
+            spend_description:
+                "Költsd el a megszerzett PHX Coinokat a Phoenix Shopban!",
+
+            commands_title: "💸 Pénzkereseti lehetőségek",
+
+            work_title: "💼 Munka",
+
+            work_description:
+                "Dolgozz, és szerezz PHX Coint biztonságos módon!",
+
+            adventure_title: "🗺️ Kaland",
+
+            adventure_description:
+                "Indulj kalandra, próbálj szerencsét, és szerezz jutalmakat!",
+
+            crime_title: "💰 Rablás",
+
+            crime_description:
+                "Vállalj nagyobb kockázatot a virtuális pénz megszerzéséért!",
+
+            risk_low: "Kockázat: Alacsony",
+
+            risk_variable: "Kockázat: Változó",
+
+            risk_high: "Kockázat: Magas",
+
+            cooldown_6: "Várakozási idő: 6 óra",
+
+            guide_title: "📖 Hogyan működik?",
+
+            step_1_title: "01. Csatlakozás",
+
+            step_1_description:
+                "Csatlakozz a Phoenix Games Discord-szerveréhez!",
+
+            step_2_title: "02. Pénzkeresés",
+
+            step_2_description:
+                "Használd a gazdasági rendszer elérhető parancsait!",
+
+            step_3_title: "03. Gyűjtögetés",
+
+            step_3_description:
+                "Növeld az egyenlegedet, és gyűjts a kiválasztott jutalomra!",
+
+            step_4_title: "04. Vásárlás",
+
+            step_4_description:
+                "Váltsd be PHX Coinjaidat a Phoenix Shopban!",
+
+            rewards_title: "🎁 Mire költheted a PHX Coinokat?",
+
+            custom_color: "🎨 Egyedi névszín",
+
+            vip_role: "👑 VIP rang",
+
+            custom_role: "🌟 Egyedi rang",
+
+            custom_voice: "🔊 Egyedi voice szoba",
+
+            days_7: "7 nap",
+
+            days_30: "30 nap",
+
+            permanent: "Állandó",
+
+            random_reward: "Véletlenszerű jutalom",
+
+            view_products: "Összes termék megtekintése",
+
+            information_title: "ℹ️ Fontos információk",
+
+            virtual_currency_title: "Virtuális fizetőeszköz",
+
+            virtual_currency_description:
+                "A PHX Coin nem valódi pénz, és nem váltható át valódi pénzre.",
+
+            cooldowns_title: "Várakozási idők",
+
+            cooldowns_description:
+                "Egyes parancsok használata után várnod kell az újbóli használatig.",
+
+            changing_economy_title: "Változó gazdaság",
+
+            changing_economy_description:
+                "Az árak, jutalmak és gazdasági beállítások idővel változhatnak.",
+
+            join_community: "Csatlakozz a közösséghez!"
+
+        });
+
+        Object.assign(translations.en, {
+
+            economy_hero:
+                "Work, try your luck, build your virtual wealth, and earn exclusive rewards!",
+
+            earning_methods: "Ways to Earn Money",
+
+            open_phoenix_shop: "Open Phoenix Shop",
+
+            currency_title: "🪙 What Is PHX Coin?",
+
+            currency_description:
+                "PHX Coin is the official virtual currency of the Phoenix Games Discord server.",
+
+            currency_usage:
+                "Earn money by using various economy commands and exchange it for exclusive community rewards in the Phoenix Shop.",
+
+            earn_title: "💰 Earning Money",
+
+            earn_description:
+                "Use economy commands and increase your balance!",
+
+            save_title: "🏦 Saving Money",
+
+            save_description:
+                "Save PHX Coins to unlock higher-value rewards!",
+
+            spend_title: "🛒 Shopping",
+
+            spend_description:
+                "Spend your earned PHX Coins in the Phoenix Shop!",
+
+            commands_title: "💸 Ways to Earn Money",
+
+            work_title: "💼 Work",
+
+            work_description:
+                "Work and earn PHX Coins safely!",
+
+            adventure_title: "🗺️ Adventure",
+
+            adventure_description:
+                "Go on an adventure, try your luck, and earn rewards!",
+
+            crime_title: "💰 Robbery",
+
+            crime_description:
+                "Take greater risks to earn virtual money!",
+
+            risk_low: "Risk: Low",
+
+            risk_variable: "Risk: Variable",
+
+            risk_high: "Risk: High",
+
+            cooldown_6: "Cooldown: 6 hours",
+
+            guide_title: "📖 How Does It Work?",
+
+            step_1_title: "01. Join",
+
+            step_1_description:
+                "Join the Phoenix Games Discord server!",
+
+            step_2_title: "02. Earn Money",
+
+            step_2_description:
+                "Use the available economy commands!",
+
+            step_3_title: "03. Save Money",
+
+            step_3_description:
+                "Increase your balance and save up for your chosen reward!",
+
+            step_4_title: "04. Purchase",
+
+            step_4_description:
+                "Redeem your PHX Coins in the Phoenix Shop!",
+
+            rewards_title: "🎁 What Can You Spend PHX Coins On?",
+
+            custom_color: "🎨 Custom Name Color",
+
+            vip_role: "👑 VIP Role",
+
+            custom_role: "🌟 Custom Role",
+
+            custom_voice: "🔊 Custom Voice Channel",
+
+            days_7: "7 days",
+
+            days_30: "30 days",
+
+            permanent: "Permanent",
+
+            random_reward: "Random Reward",
+
+            view_products: "View All Products",
+
+            information_title: "ℹ️ Important Information",
+
+            virtual_currency_title: "Virtual Currency",
+
+            virtual_currency_description:
+                "PHX Coin is not real money and cannot be exchanged for real-world currency.",
+
+            cooldowns_title: "Cooldowns",
+
+            cooldowns_description:
+                "Some commands require a waiting period before they can be used again.",
+
+            changing_economy_title: "Changing Economy",
+
+            changing_economy_description:
+                "Prices, rewards, and economy settings may change over time.",
+
+            join_community: "Join the Community!"
+
+        });
+
+    </script>
 
 </body>
 </html>
