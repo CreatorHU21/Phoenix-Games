@@ -468,3 +468,89 @@ nav a.current-page::after {
         font-size: 12px;
     }
 }
+
+/* PHOENIX MUSIC PLAYER */
+
+#phoenix-music {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 280px;
+    max-width: calc(100vw - 40px);
+    box-sizing: border-box;
+    background: linear-gradient(145deg, #17181c, #08090b);
+    border: 1px solid #76ff03;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 0 20px #76ff0320;
+    z-index: 9999;
+    color: #ffffff;
+}
+
+.music-header {
+    color: #76ff03;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.music-track {
+    color: #c0c0c0;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.music-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#music-play {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    background: #ff2020;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+#music-play:hover {
+    background: #76ff03;
+    color: #08090b;
+    box-shadow: 0 0 12px #76ff0360;
+}
+
+#music-volume {
+    flex: 1;
+    min-width: 0;
+    accent-color: #76ff03;
+    cursor: pointer;
+}
+
+#music-percent {
+    font-size: 12px;
+    min-width: 32px;
+    text-align: right;
+}
+
+#music-status {
+    color: #999999;
+    font-size: 11px;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    #phoenix-music {
+        bottom: 10px;
+        right: 10px;
+        width: 250px;
+        max-width: calc(100vw - 20px);
+        padding: 12px;
+    }
+}
