@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="hu">
 <head>
@@ -12,7 +13,6 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="logo.png">
-
 </head>
 
 <body>
@@ -23,21 +23,43 @@
 
         <div class="logo">
             <a href="index.html">
-                <img src="logo.png" alt="Phoenix Games főoldal" class="logo-img">
+                <img src="logo.png" alt="Phoenix Games" class="logo-img">
             </a>
             <span>PHOENIX GAMES</span>
         </div>
 
         <nav id="menu">
 
-            <a href="index.html" aria-current="page">Főoldal</a>
-            <a href="games.html">Játékaink</a>
-            <a href="economy.html">Gazdaság</a>
-            <a href="shop.html">Shop</a>
-            <a href="rules.html">Szabályzat</a>
-            <a href="community.html">Közösség</a>
+            <a href="index.html" data-lang="home" aria-current="page">Főoldal</a>
+            <a href="games.html" data-lang="games">Játékaink</a>
+            <a href="economy.html" data-lang="economy">Gazdaság</a>
+            <a href="shop.html" data-lang="shop">Shop</a>
+            <a href="rules.html" data-lang="rules">Szabályzat</a>
+            <a href="community.html" data-lang="community">Közösség</a>
 
         </nav>
+
+        <!-- NYELVVÁLTÓ -->
+
+        <div class="language-switcher">
+
+            <button type="button"
+                    class="language-button active"
+                    data-language="hu"
+                    aria-label="Magyar"
+                    aria-pressed="true">
+                🇭🇺 HU
+            </button>
+
+            <button type="button"
+                    class="language-button"
+                    data-language="en"
+                    aria-label="English"
+                    aria-pressed="false">
+                🇬🇧 EN
+            </button>
+
+        </div>
 
         <button id="menu-button"
                 type="button"
@@ -64,7 +86,7 @@
 
             <h1>PHOENIX GAMES</h1>
 
-            <p>
+            <p data-lang="hero_description">
                 Egy közösség. Számtalan játék.
                 Végtelen lehetőség.
             </p>
@@ -72,13 +94,16 @@
             <div class="hero-buttons">
 
                 <a class="button"
-   href="https://discord.gg/WCxk4HY8d3"
-   target="_blank"
-   rel="noopener noreferrer">
-    Csatlakozz hozzánk!
-</a>
+                   href="https://discord.gg/WCxk4HY8d3"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   data-lang="join">
+                    Csatlakozz hozzánk!
+                </a>
 
-                <a class="button" href="#discover">
+                <a class="button"
+                   href="#discover"
+                   data-lang="explore_short">
                     Fedezd fel!
                 </a>
 
@@ -90,16 +115,18 @@
 
         <section id="about">
 
-            <h2>🔥 Üdvözlünk a Phoenix Games közösségében!</h2>
+            <h2 data-lang="about_title">
+                🔥 Üdvözlünk a Phoenix Games közösségében!
+            </h2>
 
-            <p>
+            <p data-lang="about_description">
                 A Phoenix Games egy magyar gaming közösség,
                 ahol játékosok találkozhatnak,
                 csapatokat alakíthatnak, közösen játszhatnak,
                 és különleges jutalmakat szerezhetnek.
             </p>
 
-            <p>
+            <p data-lang="about_goal">
                 Célunk egy barátságos, aktív és folyamatosan
                 fejlődő közösség létrehozása.
             </p>
@@ -110,20 +137,24 @@
 
         <section id="discover">
 
-            <h2>🚀 Fedezd fel a lehetőségeket!</h2>
+            <h2 data-lang="discover_title">
+                🚀 Fedezd fel a lehetőségeket!
+            </h2>
 
             <div class="cards">
 
                 <article class="card">
 
-                    <h3>🎮 Játékaink</h3>
+                    <h3 data-lang="games_title">🎮 Játékaink</h3>
 
-                    <p>
+                    <p data-lang="games_description">
                         Találd meg kedvenc játékodat,
                         és keress magad mellé csapattársakat!
                     </p>
 
-                    <a class="button" href="games.html">
+                    <a class="button"
+                       href="games.html"
+                       data-lang="view_games">
                         Játékok megtekintése
                     </a>
 
@@ -133,13 +164,15 @@
 
                     <h3>💰 PHX Economy</h3>
 
-                    <p>
+                    <p data-lang="economy_description">
                         Szerezz PHX Coint, teljesíts
                         különböző feladatokat, és építsd
                         fel virtuális vagyonodat!
                     </p>
 
-                    <a class="button" href="economy.html">
+                    <a class="button"
+                       href="economy.html"
+                       data-lang="view_economy">
                         Gazdasági rendszer
                     </a>
 
@@ -149,13 +182,15 @@
 
                     <h3>🛒 Phoenix Shop</h3>
 
-                    <p>
+                    <p data-lang="shop_description">
                         Vásárolj különleges rangokat,
                         egyedi névszíneket és egyéb
                         közösségi jutalmakat!
                     </p>
 
-                    <a class="button" href="shop.html">
+                    <a class="button"
+                       href="shop.html"
+                       data-lang="view_shop">
                         Shop megnyitása
                     </a>
 
@@ -163,15 +198,17 @@
 
                 <article class="card">
 
-                    <h3>🏆 Rangrendszer</h3>
+                    <h3 data-lang="ranks_title">🏆 Rangrendszer</h3>
 
-                    <p>
+                    <p data-lang="ranks_description">
                         Légy aktív a közösségben,
                         gyűjts XP-t, és szerezz
                         magasabb rangokat!
                     </p>
 
-                    <a class="button" href="community.html#ranks">
+                    <a class="button"
+                       href="community.html#ranks"
+                       data-lang="view_ranks">
                         Rangrendszer
                     </a>
 
@@ -179,15 +216,17 @@
 
                 <article class="card">
 
-                    <h3>📜 Szabályzat</h3>
+                    <h3 data-lang="rules_title">📜 Szabályzat</h3>
 
-                    <p>
+                    <p data-lang="rules_description">
                         Ismerd meg a közösség szabályait,
                         és segíts fenntartani a barátságos
                         környezetet!
                     </p>
 
-                    <a class="button" href="rules.html">
+                    <a class="button"
+                       href="rules.html"
+                       data-lang="view_rules">
                         Szabályzat megtekintése
                     </a>
 
@@ -195,15 +234,17 @@
 
                 <article class="card">
 
-                    <h3>👥 Közösség</h3>
+                    <h3 data-lang="community_title">👥 Közösség</h3>
 
-                    <p>
+                    <p data-lang="community_description">
                         Csatlakozz Discord-szerverünkhöz,
                         ismerj meg új játékosokat,
                         és kövess minket!
                     </p>
 
-                    <a class="button" href="community.html">
+                    <a class="button"
+                       href="community.html"
+                       data-lang="view_community">
                         Közösség megtekintése
                     </a>
 
@@ -217,14 +258,18 @@
 
         <section id="join">
 
-            <h2>🔥 Légy te is a Phoenix Games tagja!</h2>
+            <h2 data-lang="join_title">
+                🔥 Légy te is a Phoenix Games tagja!
+            </h2>
 
-            <p>
+            <p data-lang="join_description">
                 Játssz, fejlődj, szerezz jutalmakat,
                 és építs velünk egy nagyszerű közösséget!
             </p>
 
-            <a class="button" href="community.html">
+            <a class="button"
+               href="community.html"
+               data-lang="join_options">
                 Csatlakozási lehetőségek
             </a>
 
@@ -240,13 +285,102 @@
 
         <p>PLAY. EARN. RISE.</p>
 
-        <p>
+        <p data-lang="footer_description">
             Magyar gaming közösség
         </p>
 
     </footer>
 
     <script src="script.js"></script>
+    <script src="language.js"></script>
+
+    <!-- FŐOLDALI KIEGÉSZÍTŐ FORDÍTÁSOK -->
+
+    <script>
+
+        Object.assign(translations.hu, {
+
+            explore_short: "Fedezd fel!",
+
+            about_title:
+                "🔥 Üdvözlünk a Phoenix Games közösségében!",
+
+            about_description:
+                "A Phoenix Games egy magyar gaming közösség, ahol játékosok találkozhatnak, csapatokat alakíthatnak, közösen játszhatnak, és különleges jutalmakat szerezhetnek.",
+
+            about_goal:
+                "Célunk egy barátságos, aktív és folyamatosan fejlődő közösség létrehozása.",
+
+            discover_title:
+                "🚀 Fedezd fel a lehetőségeket!",
+
+            games_title: "🎮 Játékaink",
+            ranks_title: "🏆 Rangrendszer",
+            rules_title: "📜 Szabályzat",
+            community_title: "👥 Közösség",
+
+            join_title:
+                "🔥 Légy te is a Phoenix Games tagja!",
+
+            join_description:
+                "Játssz, fejlődj, szerezz jutalmakat, és építs velünk egy nagyszerű közösséget!",
+
+            join_options: "Csatlakozási lehetőségek",
+
+            footer_description: "Magyar gaming közösség"
+
+        });
+
+        Object.assign(translations.en, {
+
+            explore_short: "Explore!",
+
+            about_title:
+                "🔥 Welcome to the Phoenix Games community!",
+
+            about_description:
+                "Phoenix Games is a Hungarian gaming community where players can meet, form teams, play together, and earn exclusive rewards.",
+
+            about_goal:
+                "Our goal is to build a friendly, active, and constantly growing community.",
+
+            discover_title:
+                "🚀 Explore the possibilities!",
+
+            games_title: "🎮 Games",
+            ranks_title: "🏆 Ranking System",
+            rules_title: "📜 Rules",
+            community_title: "👥 Community",
+
+            join_title:
+                "🔥 Become a member of Phoenix Games!",
+
+            join_description:
+                "Play, improve, earn rewards, and build an amazing community with us!",
+
+            join_options: "How to Join",
+
+            footer_description: "Hungarian gaming community"
+
+        });
+
+        function updatePageTitle() {
+            document.title = document.documentElement.lang === "en"
+                ? "Phoenix Games | Home"
+                : "Phoenix Games | Főoldal";
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            updatePageTitle();
+
+            document.querySelectorAll("[data-language]").forEach(button => {
+                button.addEventListener("click", updatePageTitle);
+            });
+
+        });
+
+    </script>
 
 </body>
 </html>
