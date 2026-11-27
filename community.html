@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Phoenix Games | Közösség</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <style>
+        .rank-list {
+            max-width: 1000px;
+            margin: 30px auto;
+        }
+
+        .rank-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #17181c;
+            border: 1px solid #30323b;
+            border-left: 5px solid var(--rank-color);
+            border-radius: 10px;
+            padding: 22px;
+            margin-bottom: 15px;
+            transition: 0.3s;
+        }
+
+        .rank-item:hover {
+            border-color: var(--rank-color);
+            transform: translateX(5px);
+        }
+
+        .rank-name {
+            color: var(--rank-color);
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .rank-level {
+            color: white;
+            font-weight: bold;
+        }
+
+        .discord-button {
+            background: #5865F2;
+            border: 1px solid #5865F2;
+        }
+
+        .discord-button:hover {
+            background: #4752C4;
+        }
+
+        .social-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 12px;
+        }
+
+        .social-card .button {
+            width: 100%;
+            margin-top: auto;
+        }
+
+        .youtube {
+            background: #FF0000;
+        }
+
+        .twitch {
+            background: #9146FF;
+        }
+
+        .tiktok {
+            background: #202020;
+            border: 1px solid #25F4EE;
+        }
+
+        .instagram {
+            background: linear-gradient(
+                45deg,
+                #F58529,
+                #DD2A7B,
+                #8134AF
+            );
+        }
+
+        .xp-value {
+            font-size: 28px;
+            font-weight: bold;
+            color: #76ff03;
+        }
+
+        @media (max-width: 768px) {
+            .rank-item {
+                padding: 16px;
+            }
+
+            .rank-name {
+                font-size: 18px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo.png" alt="Phoenix Games" class="logo-img">
+            </a>
+            <span>PHOENIX GAMES</span>
+        </div>
+
+        <nav id="menu">
+            <a href="index.html">Főoldal</a>
+            <a href="games.html">Játékaink</a>
+            <a href="economy.html">Gazdaság</a>
+            <a href="shop.html">Shop</a>
+            <a href="rules.html">Szabályzat</a>
+            <a href="community.html">Közösség</a>
+        </nav>
+
+        <button id="menu-button"
+                type="button"
+                aria-label="Menü megnyitása"
+                aria-controls="menu">
+            ☰
+        </button>
+
+    </header>
+
+    <main>
+
+        <!-- KÖZÖSSÉGI FŐOLDAL -->
+
+        <section class="hero">
+
+            <p class="subtitle">PLAY TOGETHER. RISE TOGETHER.</p>
+
+            <h1>KÖZÖSSÉG</h1>
+
+            <p>
+                Ismerj meg új játékosokat,
+                szerezz barátokat, fejlődj,
+                és légy részese a Phoenix Games közösségének!
+            </p>
+
+            <a class="button discord-button"
+               href="https://discord.gg/WCxk4HY8d3"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                💬 Csatlakozás a Discordhoz
+
+            </a>
+
+            <a class="button" href="#ranks">
+                Rangrendszer megtekintése
+            </a>
+
+        </section>
+
+        <!-- KÖZÖSSÉGI LEHETŐSÉGEK -->
+
+        <section id="community">
+
+            <h2>👥 Miért csatlakozz hozzánk?</h2>
+
+            <div class="cards">
+
+                <article class="card">
+                    <h3>🎮 Közös játék</h3>
+                    <p>
+                        Találj csapattársakat kedvenc
+                        játékaidhoz, és szerezz közös élményeket!
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>🏆 Rangrendszer</h3>
+                    <p>
+                        Gyűjts XP-t, lépj szintet,
+                        és szerezz különleges rangokat!
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>💰 PHX Economy</h3>
+                    <p>
+                        Szerezz virtuális pénzt,
+                        és vásárolj közösségi jutalmakat!
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>📺 Tartalomgyártás</h3>
+                    <p>
+                        Kövesd a streameket,
+                        videókat és közösségi tartalmakat!
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- RANGRENDSZER -->
+
+        <section id="ranks">
+
+            <h2>🏆 Phoenix rangrendszer</h2>
+
+            <p>
+                A Discord-szerveren tanúsított aktivitásoddal
+                XP-t szerezhetsz, amelynek segítségével
+                egyre magasabb rangokat érhetsz el.
+            </p>
+
+            <div class="rank-list">
+
+                <div class="rank-item"
+                     style="--rank-color: #FFFFFF;">
+                    <span class="rank-name">🌟 │ Eternal</span>
+                    <span class="rank-level">200. szint</span>
+                </div>
+
+                <div class="rank-item"
+                     style="--rank-color: #FFB900;">
+                    <span class="rank-name">👑 │ Legend</span>
+                    <span class="rank-level">100. szint</span>
+                </div>
+
+                <div class="rank-item"
+                     style="--rank-color: #FFDF00;">
+                    <span class="rank-name">🐦‍🔥 │ Rising</span>
+                    <span class="rank-level">50. szint</span>
+                </div>
+
+                <div class="rank-item"
+                     style="--rank-color: #9025DF;">
+                    <span class="rank-name">🌋 │ Inferno</span>
+                    <span class="rank-level">25. szint</span>
+                </div>
+
+                <div class="rank-item"
+                     style="--rank-color: #FF2055;">
+                    <span class="rank-name">🔥 │ Blaze</span>
+                    <span class="rank-level">10. szint</span>
+                </div>
+
+                <div class="rank-item"
+                     style="--rank-color: #FF8000;">
+                    <span class="rank-name">⚡ │ Spark</span>
+                    <span class="rank-level">5. szint</span>
+                </div>
+
+                <div class="rank-item"
+                     style="--rank-color: #888888;">
+                    <span class="rank-name">🪵 │ Ember</span>
+                    <span class="rank-level">1. szint</span>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- XP RENDSZER -->
+
+        <section id="xp">
+
+            <h2>⭐ Hogyan szerezhetsz XP-t?</h2>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>💬 Üzenetküldés</h3>
+
+                    <p class="xp-value">15–40 XP</p>
+
+                    <p>Várakozási idő: 60 másodperc</p>
+
+                    <p>
+                        Vegyél részt a közösségi
+                        beszélgetésekben!
+                    </p>
+
+                </article>
+
+                <article class="card">
+
+                    <h3>🔊 Hangcsatorna</h3>
+
+                    <p class="xp-value">15–40 XP</p>
+
+                    <p>Időköz: 180 másodperc</p>
+
+                    <p>
+                        Beszélgess és játssz
+                        a közösség tagjaival!
+                    </p>
+
+                </article>
+
+                <article class="card">
+
+                    <h3>👍 Reakciók</h3>
+
+                    <p class="xp-value">25 XP</p>
+
+                    <p>Várakozási idő: 300 másodperc</p>
+
+                    <p>
+                        Reagálj a közösség
+                        üzeneteire és tartalmaira!
+                    </p>
+
+                </article>
+
+            </div>
+
+            <p style="margin-top: 25px;">
+                Az XP-rendszer kijátszása és a spam
+                a közösségi szabályzat értelmében tilos.
+            </p>
+
+        </section>
+
+        <!-- ELŐFIZETŐI ELŐNYÖK -->
+
+        <section id="subscribers">
+
+            <h2>💎 Előfizetői előnyök</h2>
+
+            <p>
+                Az előfizetők különleges közösségi
+                lehetőségekhez férhetnek hozzá.
+            </p>
+
+            <div class="cards">
+
+                <article class="card">
+                    <h3>🔒 Privát chat</h3>
+                    <p>Kizárólag előfizetők számára elérhető chatcsatorna.</p>
+                </article>
+
+                <article class="card">
+                    <h3>🔊 Privát hangcsatorna</h3>
+                    <p>Elkülönített beszélgetési lehetőség az előfizetőknek.</p>
+                </article>
+
+                <article class="card">
+                    <h3>⚡ XP Boost</h3>
+                    <p>Bónusz XP a gyorsabb szintlépéshez.</p>
+                </article>
+
+                <article class="card">
+                    <h3>🎮 Elsőbbség</h3>
+                    <p>Elsőbbség a közös játékok során.</p>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- CSAPATKERESÉS -->
+
+        <section id="team">
+
+            <h2>🎮 Csapattársat keresel?</h2>
+
+            <p>
+                Csatlakozz Discord-szerverünkhöz,
+                találj hozzád illő játékosokat,
+                és alakítsatok közös csapatot!
+            </p>
+
+            <a class="button discord-button"
+               href="https://discord.gg/WCxk4HY8d3"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                Csapattárs keresése a Discordon
+
+            </a>
+
+        </section>
+
+        <!-- KÖZÖSSÉGI MÉDIA -->
+
+        <section id="socials">
+
+            <h2>📱 Kövess minket!</h2>
+
+            <p>
+                Ne maradj le a legújabb videókról,
+                élő közvetítésekről és tartalmakról!
+            </p>
+
+            <div class="cards">
+
+                <article class="card social-card">
+
+                    <h3>🔴 YouTube</h3>
+
+                    <p>@Phoenix_Official_VOD</p>
+
+                    <p>Videók és közvetítések.</p>
+
+                    <a class="button youtube"
+                       href="https://www.youtube.com/@Phoenix_Official_VOD"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        YouTube megnyitása
+
+                    </a>
+
+                </article>
+
+                <article class="card social-card">
+
+                    <h3>🟣 Twitch</h3>
+
+                    <p>phoenixofficial001</p>
+
+                    <p>Élő közvetítések és közös játékok.</p>
+
+                    <a class="button twitch"
+                       href="https://www.twitch.tv/phoenixofficial001"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        Twitch megnyitása
+
+                    </a>
+
+                </article>
+
+                <article class="card social-card">
+
+                    <h3>🎵 TikTok</h3>
+
+                    <p>@mathiaskingg01</p>
+
+                    <p>Rövid videók és gaming pillanatok.</p>
+
+                    <a class="button tiktok"
+                       href="https://www.tiktok.com/@mathiaskingg01"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        TikTok megnyitása
+
+                    </a>
+
+                </article>
+
+                <article class="card social-card">
+
+                    <h3>📸 Instagram</h3>
+
+                    <p>@valaki.aki.nem.leszel</p>
+
+                    <p>Képek és közösségi tartalmak.</p>
+
+                    <a class="button instagram"
+                       href="https://www.instagram.com/valaki.aki.nem.leszel/?hl=hu"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        Instagram megnyitása
+
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- DISCORD CSATLAKOZÁS -->
+
+        <section id="join">
+
+            <h2>🔥 Légy te is a Phoenix Games tagja!</h2>
+
+            <p>
+                Egy közösség. Számtalan játék.
+                Végtelen lehetőség.
+            </p>
+
+            <a class="button discord-button"
+               href="https://discord.gg/WCxk4HY8d3"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                Csatlakozz most!
+
+            </a>
+
+            <a class="button" href="rules.html">
+                Szabályzat megtekintése
+            </a>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Phoenix Games</p>
+        <p>PLAY. EARN. RISE.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
