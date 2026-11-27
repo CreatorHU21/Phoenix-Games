@@ -393,3 +393,24 @@ nav a.current-page {
 nav a.current-page::after {
     width: 100%;
 }
+/* KÁRTYÁK ÉS GOMBOK EGYSÉGESÍTÉSE */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card > .button {
+    margin-top: auto;
+    width: 100%;
+    min-height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.card:has(> .button) > p:last-of-type {
+    margin-bottom: 25px;
+}
